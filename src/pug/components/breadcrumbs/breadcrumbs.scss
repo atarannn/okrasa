@@ -1,0 +1,45 @@
+.breadcrumbs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1;
+    gap: 15px;
+    position: absolute;
+    top: 50%;
+    right: var(--field);
+    width: 100%;
+    @include to(680px) {
+      position: static;
+      justify-content: center;
+    }
+    .breadcrumbs-item {
+      font-size: var(--text-font14);
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      line-height: 120%;
+      color: $bc;
+      text-align: center;
+      a {
+        color: $bc;
+      }
+      &__current {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline;
+        max-width: 150px;
+        color: #9F988B;
+      }
+    }
+  }
+  .dark-title {
+    width: 50%;
+  }
+}

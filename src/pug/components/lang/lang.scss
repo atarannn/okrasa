@@ -1,0 +1,28 @@
+.lang-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 auto;
+
+  li {
+    a {
+      @include font;
+      color: $bc;
+      text-transform: uppercase;
+      font-size: var(--font-12);
+    }
+    &.active {
+      a {
+        color: $green;
+        pointer-events: none;
+      }
+    }
+  }
+
+  span {
+    font-size: calc(var(--font-12)/1.2);
+    color: $grey;
+    pointer-events: none;
+  }
+}

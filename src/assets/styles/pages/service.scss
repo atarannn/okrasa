@@ -1,0 +1,12 @@
+.service-section-7 {
+  .patern-main {
+    right: 0;
+    top: -10%;
+    width: 180px;
+
+    @include to(1440px) {
+      width: 112px;
+      top: -15%;
+    }
+  }
+}

@@ -1,0 +1,192 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'sport'
+    var id_page = 'id-page-sport'
+    var class_page = 'class-page-sport'
+    var breadcrumbsSubitem = [
+      {
+        label: 'sport',
+        link: pagesLink[0].sport
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/sport/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main Живи там, де
+        .light-title-main Більше активностей
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section.sport-section-2.block-style-column-2#section-2
+    .block-style-column-2__text-wrapper-3
+      .block-style-text
+        +svg('patern').patern-1
+        .dark-text Цілий рік займайтесь улюбленим видом спорту не покидаючи територію міста. З дітьми чи наодинці, на спортивному майданчику чи полі, на набережній чи у залі. І навіть на воді.
+        +svg('patern2').patern-2
+      .block-style-row
+        .block-style-col
+          .block-style-col-top
+            .light-title-main 10
+            .light-text-main км
+          .block-style-col-bottom
+            .light-text-main Бігових та вело-доріжок
+        .block-style-col
+          .block-style-col-top
+            .light-title-main 860
+            .light-text-main м²
+          .block-style-col-bottom
+            .light-text-main Площа спортивних майданчиків
+        .block-style-col
+          .block-style-col-top
+            .light-title-main 25
+            .light-text-main м
+          .block-style-col-bottom
+            .light-text-main Довжина кожної доріжки басейну
+        .block-style-col
+          .block-style-col-top
+            .light-title-main 4
+          .block-style-col-bottom
+            .light-text-main Спортивних поля
+      .block-style-column-2__text-wrapper
+        .green-subtitle Живи там, де
+        .dark-title Спорт для всіх
+        +svg('patern2').patern
+        .dark-text Найкращий у світі спортзал той, що відкритий будь-якої пори року. В місті передбачено кілька workout зон для різного віку, спортивні поля для активних ігор та мережа бігових і вело-доріжок. Хто ж відмовиться від персонального спортзалу на свіжому повітрі?
+    .block-style-column-2__info-wrapper
+      img(src='./assets/images/sport/2.jpg' alt='img')
+  section.block-style-row.block-style-row-2.block-offset-top
+    .block-style-row__left.block-offset-left
+      .dark-title Бери і катайся
+      .dark-text-wrapper
+        .dark-text Велодоріжки в O.Краса обʼєднані в одну безпечну вело-мережу. Впевнені, що основним транспортом в місті стане велосипед чи самокат.
+        .dark-text То ж ми створили власну мережу велошерингу, пункти якого розміщенні практично на кожному кроці.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/sport/3.jpg' alt='img')
+  section.sport-section-4.block-style-row.block-style-row-2.block-style-row-reverse.block-offset-top.for-patern
+    img(src='./assets/images/sport/patern-1.png' alt='patern').patern-main
+    .block-style-row__left.block-offset-right
+      .dark-title Плавати ми ходимо пішки
+      .dark-text-wrapper
+        .dark-text Прямо на території - великий спортивний комплекс з власним басейном, тренажерним залом та спа-зоною.
+        .dark-text Це окрім декількох відкритих басейнів, які ми розмістили на набережній та біля каналів.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/sport/4.jpg' alt='img')
+  section.block-style-img.block-offset-top.for-patern
+    img(src='./assets/images/sport/5.jpg' alt='img')
+  section.sport-section-6.block-style-column-4.block-offset-top.for-patern
+    img(src='./assets/images/sport/patern-2.png' alt='img').patern-main
+    .block-style-column-4__text-wrapper
+      .green-subtitle Поруч з вами
+      .dark-title Спорт на висоті
+      +svg('patern2').patern
+      .dark-text А як щодо екстремального виду спорту чи хобі? Ми створили місце, де можна поганяти на скейті, роликах, самокаті чи велику. Справжнісінький скейт-парк. І про гірки для альпінізму не забули.
+    .block-style-column-4__info-wrapper
+      .sport-section-6-card
+        .sport-section-6-card-title.dark-title Водний спорт
+        .sport-section-6-card-img
+          img(src='./assets/images/sport/1/1.jpg' alt='img')
+        .sport-section-6-card-text
+          +svg('patern')
+          .dark-text Спробуйте сапсерфінг, якщо бажаєте насолодитись стихією води.
+      .sport-section-6-card
+        .sport-section-6-card-title.dark-title.white Тенісні корти
+        .sport-section-6-card-img
+          img(src='./assets/images/sport/1/2.jpg' alt='img')
+        .sport-section-6-card-text
+          +svg('patern')
+          .dark-text Година активної гри з однодумцем у тенніс задасть ритм на цілий день.
+      .sport-section-6-card
+        .sport-section-6-card-title.dark-title.white Йога
+        .sport-section-6-card-img
+          img(src='./assets/images/sport/1/3.jpg' alt='img')
+        .sport-section-6-card-text
+          +svg('patern')
+          .dark-text Чи розпочніть свій день з йоги на березі річки чи озера. Тільки не забудьте коврик.
+      .sport-section-6-card
+        .sport-section-6-card-title.dark-title.white Скейтпарк
+        .sport-section-6-card-img
+          img(src='./assets/images/sport/1/4.jpg' alt='img')
+        .sport-section-6-card-text
+          +svg('patern')
+          .dark-text Для активних та охочих до екстриму - власний скейт-парк.
+      .sport-section-6-card
+        .sport-section-6-card-title.dark-title.white Футбол
+        .sport-section-6-card-img
+          img(src='./assets/images/sport/1/5.jpg' alt='img')
+        .sport-section-6-card-text
+          +svg('patern')
+          .dark-text Збирайте команду та беріть з собою мʼяч. Орієнтир — поле з футбольними воротами.
+      .sport-section-6-card
+        .sport-section-6-card-title.dark-title Баскетбол
+        .sport-section-6-card-img
+          img(src='./assets/images/sport/1/6.jpg' alt='img')
+        .sport-section-6-card-text
+          +svg('patern')
+          .dark-text Набрид футбол? Зустрінемось на баскетбольному полі!
+      .sport-section-6-card
+        .sport-section-6-card-title.dark-title.white Басейн
+        .sport-section-6-card-img
+          img(src='./assets/images/sport/1/7.jpg' alt='img')
+        .sport-section-6-card-text
+          +svg('patern')
+          .dark-text Насолоджуйтесь плаванням. У вашому розпорядженні відкриті басейни чи басейн спорткомплексу.
+      .sport-section-6-card
+        .sport-section-6-card-title.dark-title.white Вело-доріжки
+        .sport-section-6-card-img
+          img(src='./assets/images/sport/1/8.jpg' alt='img')
+        .sport-section-6-card-text
+          +svg('patern')
+          .dark-text Вечірню прогулянку можна замінити велопрогулянкою всією родиною. Пам’ятаєте, що ми маємо велотрасу аж до Києва?
+
+
+  section.block-style-text
+    +svg('patern').patern-1
+    .dark-text В O.Красі фізичне навантаження та емоційне розвантаження у пішій доступності. Найважчим залишиться взути кросівки та вийти з дому. Беріть дітей з собою.
+    +svg('patern2').patern-2
+  a(href="children.html").block-style-nav
+    img(src='./assets/images/patern-main-1.png' alt='patern').patern-main-1
+    img(src='./assets/images/patern-main-2.png' alt='patern').patern-main-2
+    .block-style-nav-left.block-offset-left
+      .light-text Наступний розділ
+      .light-title Дітям
+      .white-btn
+        span Перейти
+        +svg('arrow')
+    .block-style-nav-right
+      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      img(src='./assets/images/sport/footer.jpg' alt='footer-nav').img
+
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

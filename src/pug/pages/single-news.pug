@@ -1,0 +1,77 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'single-news'
+    var id_page = 'id-page-single-news'
+    var class_page = 'class-page-single-news'
+    var breadcrumbsSubitem = [
+      {
+        label: 'single-news',
+        link: pagesLink[0].single-news
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/single-news.js')
+
+block content
+  .single-news-wrapper
+    #back-btn.small-btn
+      +svg('arrow')
+    .single-news
+      img(src='./assets/images/single-news/patern-1.png' alt='patern').patern-main.patern-main-1
+      img(src='./assets/images/single-news/patern-2.png' alt='patern').patern-main.patern-main-2
+      .single-news-info
+        .green-subtitle 10 травня 2023 р.
+        .dark-title Запрошуємо на презентацію нового котеджного містечка!
+        +svg('patern2')
+      .img
+        img(src='./assets/images/single-news/1.jpg' alt='img')
+      .text-wrapper
+        .title
+        .dark-text В місті є приватний дитячий садочок з власною зоною для прогулянок, ігровими майданчиками та спортивною зоною. Ми цінуємо красу і ніколи не намагаємось на ній економити. А архітектурну красу гармонічно поєднуємо з природною в єдиний ансамбль. Найкращий у світі спортзал той, що відкритий будь-якої пори року. В місті передбачено кілька workout зон для різного віку, спортивні поля для активних ігор та мережа бігових і вело-доріжок. Хто ж відмовиться від персонального спортзалу на свіжому повітрі?
+        ul.text-list Тут приклад списку:
+          li.dark-text перший пункт списку;
+          li.dark-text другий пункт списку;
+          li.dark-text третій пункт списку;
+          li.dark-text четвертий пункт списку;
+        .dark-text В місті є приватний дитячий садочок з власною зоною для прогулянок, ігровими майданчиками та спортивною зоною. Ми цінуємо красу і ніколи не намагаємось на ній економити. А архітектурну красу гармонічно поєднуємо з природною в єдиний ансамбль. Найкращий у світі спортзал той, що відкритий будь-якої пори року. В місті передбачено кілька workout зон для різного віку, спортивні поля для активних ігор та мережа бігових і вело-доріжок. Хто ж відмовиться від персонального спортзалу на свіжому повітрі?
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/b2wLoccnQ1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      a(href="3d.html").main-btn
+        span Обрати будинок
+        +svg('arrow')
+    .last-news
+      .dark-title Останні новини та акції
+      .last-news-list
+        a(href="single-news.html").news-card.news
+          .img
+            img(src="./assets/images/news/2.jpg")
+          .news-card-info
+            .news-card-info-data 10 травня 2023 р.
+            .news-card-info-text Встигніть здійснити бажання про власне житло! Продаж квартир у нашому жк відкрито!
+        a(href="single-news.html").news-card.news
+          .img
+            img(src="./assets/images/news/4.jpg")
+          .news-card-info
+            .news-card-info-data 10 травня 2023 р.
+            .news-card-info-text Запрошуємо на презентацію нового котеджного містечка!
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

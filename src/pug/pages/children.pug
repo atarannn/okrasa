@@ -1,0 +1,121 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'children'
+    var id_page = 'id-page-children'
+    var class_page = 'class-page-children'
+    var breadcrumbsSubitem = [
+      {
+        label: 'children',
+        link: pagesLink[0].children
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/children-slider.js')
+
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/children/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main Живи там, де
+        .light-title-main Більше радості
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section.block-style-text#section-2
+    +svg('patern').patern-1
+    .dark-text На території міста ми розробили безліч ігрових та спортивних майданчиків. Від наймолодших і до підлітків - тут кожному знайдеться весела компанія.
+    +svg('patern2').patern-2
+  section.block-style-row.block-style-row-2
+    .block-style-row__left.block-offset-left
+      .green-subtitle Живи там, де
+      .dark-title Дитячі майданчики майбутнього
+      .dark-text-wrapper
+        .dark-text Всі майданчики обʼєднані в єдину мережу, яка цікава своєю ігровою насиченністю. Вони доповнюють один одного з точки зору розвитку дитячого тіла та мозку.
+        .dark-text Дітям зручно переходити з майданчика на майданчик, і їх розвиток буде більш різностороннім.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/children/2.jpg' alt='img')
+  section.children-section-4.block-style-column-2
+    .block-style-column-2__text-wrapper
+      .green-subtitle Поруч з вами
+      .dark-title Власна школа
+      +svg('patern2').patern
+      .dark-text Тут забувається вираз "возити дитину до школи". І ви звикнете просто заводити дітей до школи, приділяючи цьому лише декілька хвилин. І школа і садочок - все, на території міста.
+    .block-style-column-2__info-wrapper
+      img(src='./assets/images/children/3.jpg' alt='img')
+  section.children-section-5.block-style-row.block-style-row-2.block-style-row-reverse.block-offset-top.for-patern
+    img(src='./assets/images/children/patern-1.png' alt='patern').patern-main
+    .block-style-row__left.block-offset-right
+      .dark-title Садочок та гуртки
+      .dark-text-wrapper
+        .dark-text В місті є приватний дитячий садочок з власною зоною для прогулянок, ігровими майданчиками та спортивною зоною.
+        .dark-text Крім того, ми створили дитячий центр площею 600 кв.м., для проведення майстер-класів, лекцій, мистецьких гуртків та тренінгів.
+        .dark-text А ще тут можна проводити час в негоду та святкувати гомінкі дні народження.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/children/4.jpg' alt='img')
+  section.children-section-6.block-style-row.block-style-row-2.block-offset-top.for-patern
+    img(src='./assets/images/children/patern-2.png' alt='patern').patern-main
+    .block-style-row__left.block-offset-left
+      .dark-title Для найменших
+      .dark-text-wrapper
+        .dark-text Baby Club - це не лише локація для розваг та соціалізації найменших жителів міста. Це чудове місце для комунікації мам, бабусь і навіть татусів.
+        .dark-text Ви можете поспілкуватись та відпочивати поки ваш малюк грається з іншими дітками. Або ж залишити його тут з нянею, поки займаєтесь своїми справами.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/children/5.jpg' alt='img')
+  section.children-section-7.block-style-column-4.block-offset-top
+    .block-style-column-4__info-wrapper.section-6
+      .swiper-container.section-6-slider.section-6-slider-2
+        .swiper-navigation-wrapper.swiper-pagination.swiper-pagination-2
+        .swiper-wrapper
+          .swiper-slide
+            img(src='./assets/images/children/slider/1.jpg' alt='slide')
+          .swiper-slide
+            img(src='./assets/images/children/slider/2.jpg' alt='slide')
+          .swiper-slide
+            img(src='./assets/images/children/slider/3.jpg' alt='slide')
+
+  section.block-style-text
+    +svg('patern').patern-1
+    .dark-text Просто відкрийте двері і ваші діти опиняться в місті, де панує філософія безпеки та щасливого дитинства. І найважчим виявиться заманити їх назад в будинок.
+    +svg('patern2').patern-2
+  a(href="3d.html").block-style-nav
+    img(src='./assets/images/patern-main-1.png' alt='patern').patern-main-1
+    img(src='./assets/images/patern-main-2.png' alt='patern').patern-main-2
+    .block-style-nav-left.block-offset-left
+      .light-text Наступний розділ
+      .light-title Будинки
+      .white-btn
+        span Перейти
+        +svg('arrow')
+    .block-style-nav-right
+      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      img(src='./assets/images/children/footer.jpg' alt='footer-nav').img
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

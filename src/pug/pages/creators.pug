@@ -1,0 +1,117 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'creators'
+    var id_page = 'id-page-creators'
+    var class_page = 'class-page-creators'
+    var breadcrumbsSubitem = [
+      {
+        label: 'creators',
+        link: pagesLink[0].creators
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/creators-slider.js')
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/creators/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main Місто створює
+        .light-title-main Команда команд
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section.block-style-text#section-2
+    +svg('patern').patern-1
+    .dark-text Для створення О.Краса три великі компанії обʼєднали свій досвід, ресурси та вміння. Все заради однієї мети - зробити це місто легендою, до якої хочеться доторкнутись, бути причасним до її реалізації та життя
+    +svg('patern2').patern-2
+  section.section-6
+    .swiper-container.section-6-slider.section-6-slider-3
+      .swiper-navigation-wrapper.swiper-pagination
+      .swiper-wrapper
+        .swiper-slide
+          .left
+            img(src='./assets/images/creators/slider/1.svg' alt='logo').logo-1
+            .text-wrapper
+              .dark-text Провідна українська інвестиційна компанія, що заснована в 2004 році.
+              .dark-text В проєкті О.Краса залучено весь інвестиційний досвід компанії. В тому числі, економічна аналітика та експертиза в управлінні активами.
+            .info-wrapper
+              .info
+                .row
+                  .green-title $4
+                  .green-text млрд
+                .dark-text Залучених інвестицій
+              .info
+                .green-title 19
+                .dark-text Років на ринку
+            a(href="#").main-btn
+              span Сайт компанії
+              +svg('arrow')
+          .right
+            img(src='./assets/images/creators/slider/1.png' alt='slide')
+        .swiper-slide
+          .left
+            img(src='./assets/images/creators/slider/2.svg' alt='logo').logo-2
+            .text-wrapper
+              .dark-text Група будівельних компаній, що об’єднала талановитих та організаційно сильних людей.
+              .dark-text Вміння створювати та будувати масштабні проекти в заплановані строки, досвід розбудови інфраструктурних обʼєктів міста - все це вклад Товариства в проект.
+            .info-wrapper
+              .info
+                .green-title 16
+                .dark-text Житлових комплексів
+              .info
+                .green-title 0
+                .dark-text Затримок у будівництві
+            a(href="#").main-btn
+              span Сайт компанії
+              +svg('arrow')
+          .right
+            img(src='./assets/images/creators/slider/2.png' alt='slide')
+        .swiper-slide
+          .left
+            img(src='./assets/images/creators/slider/3.svg' alt='logo').logo-3
+            .text-wrapper
+              .dark-text Будівельна компанія, що спеціалізується на низькоповерховому будівництві.
+              .dark-text Якість будівництва, увага до деталей та організації простору, все це разом з бездоганною репутацією, знаходить своє відображення в кожному проекті компанії.
+            .info-wrapper
+              .info
+                .green-title 6
+                .dark-text Котеджних містечок
+              .info
+                .row
+                  .green-title 30
+                  .green-text %
+                .dark-text Продажів за рекомендаціями
+            a(href="#").main-btn
+              span Сайт компанії
+              +svg('arrow')
+          .right
+            img(src='./assets/images/creators/slider/3.png' alt='slide')
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

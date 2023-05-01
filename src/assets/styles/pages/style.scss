@@ -1,0 +1,21 @@
+.style-section-2 {
+  .block-style-column-2__info-wrapper {
+    &:after {
+      height: 70%;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 64.88%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+}
+
+.style-section-4 {
+  .patern-main {
+    top: 15%;
+    left: 0;
+    width: 355px;
+
+    @include to(1440px) {
+      width: 168px;
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.sport-section-2 {
+  .block-style-column-2__info-wrapper {
+    &:after {
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 64.88%, rgba(255, 255, 255, 0) 100%);
+      height: 80%;
+    }
+  }
+}
+
+.sport-section-4 {
+  .patern-main {
+    top: -10%;
+    left: 0;
+    width: 355px;
+
+    @include to(1440px) {
+      width: 168px;
+      top: 0;
+    }
+  }
+}
+
+
+.sport-section-6 {
+  .block-style-column-4__info-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--offset-20);
+    padding: 0 var(--offset-100);
+
+    .sport-section-6-card {
+      --sport-card-h: 500px;
+
+      @include to(1440px) {
+        --sport-card-h: 370px;
+      }
+
+      height: var(--sport-card-h);
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+
+      cursor: pointer;
+
+      &:hover {
+        .sport-section-6-card-img {
+          transition: height .5s linear;
+          height: calc(var(--sport-card-h) - 220px);
+
+          @include to(1440px) {
+            height: calc(var(--sport-card-h) - 160px);
+          }
+        }
+
+        .sport-section-6-card-text {
+          transition: height .5s linear;
+          height: 220px;
+
+          @include to(1440px) {
+            height: 160px;
+          }
+
+          .dark-text {
+            opacity: 1;
+            visibility: visible;
+            transition: all .5s ease-in-out;
+            transition-delay: 0.2s;
+          }
+
+          svg {
+            opacity: 1;
+            visibility: visible;
+            transition: all .5s ease-in-out;
+            transition-delay: 0.2s;
+          }
+        }
+      }
+
+      &-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        top: 29px;
+        font-size: var(--font-32);
+        text-align: center;
+        width: 100%;
+
+        @include to(1440px) {
+          top: 20px;
+        }
+
+        &.white {
+          color: $wc;
+        }
+      }
+
+      &-img {
+        height: 500px;
+        width: 100%;
+        transition: height .5s linear;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+
+      &-text {
+        height: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $wc;
+        gap: var(--offset-20);
+        transition: height .5s linear;
+
+        svg {
+          width: 26px;
+          height: 37px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all .5s ease-in-out;
+
+          @include to(1440px) {
+            height: 26px;
+          }
+        }
+
+        .dark-text {
+          text-align: center;
+          width: 90%;
+          opacity: 0;
+          visibility: hidden;
+          transition: all .5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .patern-main {
+    top: -40%;
+    right: 0;
+    width: 180px;
+
+    @include to(1440px) {
+      top: -10%;
+      width: 112px;
+    }
+  }
+}

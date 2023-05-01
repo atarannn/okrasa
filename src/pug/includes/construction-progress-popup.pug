@@ -1,0 +1,26 @@
+.construction_progress-popup-wrapper(data-construction-progress)
+  .construction_progress-popup
+    .left
+      .top
+        .text-style(data-date) 25 Серпень 2023 р.
+        +svg('patern2')
+        .dark-text Монтаж ліфтів Продовжується влаштування систем опалення, вентиляції, водопроводу, каналізації та електрики. Проходять фасадні роботи на торцях. Влаштування утеплення на балконах.
+      .bottom
+        +svg('patern')
+        .text-style(data-photo) 14 фото
+        .text-style(data-video) 1 видео
+    .swiper
+      .swiper-wrapper
+        .swiper-slide
+          img(src="./assets/images/construction/1.jpg", alt="")
+        .swiper-slide
+          img(src="./assets/images/construction/2.jpg", alt="")
+      .swiper-button
+        .swiper-left(data-swiper-prev)
+          +svg('swiper')
+        .swiper-right(data-swiper-next)
+          +svg('swiper')
+    .btn-close(type="button" data-close-construction-progress)
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 25L1 1M1 25L25 1L1 25Z" stroke-width="2"/>
+      </svg>

@@ -1,0 +1,42 @@
+.health-section-4 {
+  .block-style-column-2__info-wrapper {
+    &:after {
+      background: linear-gradient(180deg, #FFFFFF 15.1%, rgba(255, 255, 255, 0) 100%);
+      height: 70%;
+    }
+  }
+}
+
+.health-section-5 {
+  .block-style-column-2__info-wrapper {
+    &:after {
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      height: 70%;
+    }
+  }
+}
+
+.health-section-5 {
+  .patern-main {
+    left: 0;
+    top: -20%;
+    width: 300px;
+
+    @include to(1440px) {
+      width: 200px;
+    }
+  }
+}
+
+.health-section-7 {
+  .patern-main {
+    right: 0;
+    top: -5%;
+    width: 180px;
+
+    @include to(1440px) {
+      width: 112px;
+      top: -10%;
+    }
+  }
+}

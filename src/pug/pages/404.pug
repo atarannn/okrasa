@@ -1,0 +1,54 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = '404'
+    var id_page = 'id-page-404'
+    var class_page = 'class-page-404'
+    var breadcrumbsSubitem = [
+      {
+        label: '404',
+        link: pagesLink[0].error
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/social-btn.js')
+block content
+  section.section-1.page-404.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/404/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .title-404 Кутюр’є моє, ви ж так усю красу проґавите
+        .row-404
+          .num-404 4
+          img(src='./assets/images/404/2.png' alt='img')
+          .num-404 4
+        .row-404-2
+          a(href="index.html").white-btn
+            span Гребти на головну
+            +svg('arrow')
+          .white-btn(data-call-form)
+            span Викликати допомогу
+            +svg('arrow')
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

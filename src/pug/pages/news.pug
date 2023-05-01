@@ -1,0 +1,71 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'news'
+    var id_page = 'id-page-news'
+    var class_page = 'class-page-news'
+    var breadcrumbsSubitem = [
+      {
+        label: 'news',
+        link: pagesLink[0].news
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/news.js')
+
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/news/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main О.Краса
+        .light-title-main Новини та акції
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section#section-2.inner-section
+    .inner-filter
+      button(data-view="all").inner-filter-btn.active Усі
+      button(data-view="news").inner-filter-btn Новини
+      button(data-view="action").inner-filter-btn Акції
+    .news-list
+      a(href="single-news.html").news-card.news
+        .img
+          img(src="./assets/images/news/2.jpg")
+        .news-card-info
+          .news-card-info-data 10 травня 2023 р.
+          .news-card-info-text Встигніть здійснити бажання про власне житло! Продаж квартир у нашому жк відкрито!
+      a(href="single-news.html").news-card.action
+        .img
+          img(src="./assets/images/news/3.jpg")
+        .news-card-info
+          .news-card-info-data 10 травня 2023 р.
+          .news-card-info-text Старт продажу раннього раунду інвестицій!
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

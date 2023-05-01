@@ -1,0 +1,11 @@
+.breadcrumbs-wrapper
+  ul.breadcrumbs
+    li.breadcrumbs-item
+      a(href="index.html").link--hover-3 головна
+    if breadcrumbsSubitem
+      each v in breadcrumbsSubitem
+        li.breadcrumbs-item.breadcrumbs-item__current= v.label
+  if breadcrumbsSubitem
+    each v in breadcrumbsSubitem
+      .dark-title= v.label
+

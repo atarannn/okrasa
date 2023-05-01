@@ -1,0 +1,130 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'health'
+    var id_page = 'id-page-health'
+    var class_page = 'class-page-health'
+    var breadcrumbsSubitem = [
+      {
+        label: 'health',
+        link: pagesLink[0].health
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/health-slider.js')
+
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/health/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main Живи там, де
+        .light-title-main Територія здоров’я
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section.block-style-text#section-2
+    +svg('patern').patern-1
+    .dark-text Вʼїжджаючи до O.Kраса обовʼязково відчиніть вікно автомобіля, та вдихніть чистого свіжого повітря. Без перебільшень - це територія здорового способу життя.
+    +svg('patern2').patern-2
+  section.block-style-row.block-style-row-2.block-style-row-reverse
+    .block-style-row__left.block-offset-right
+      .dark-title SPA-центр
+      .dark-text-wrapper
+        .dark-text Після активного робочого тижня, тіло так і просить відновлення сил.
+        .dark-text Для цього ідеально підходить сімейний день у нашому спа-центрі. Карпатські бані та хамами, масажні сеанси і просто релакс в басейні допоможуть вам підтримувати гармонію з природою.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/health/2.jpg' alt='img')
+  section.health-section-4.block-style-column-2
+    .block-style-column-2__text-wrapper
+      .dark-title Чисте повітря
+      +svg('patern2').patern
+      .dark-text Те, чим ми дихаємо та у якому середовищі живемо, відіграє значну роль для здоровʼя. Погоджуємось, природа та екологія в О.Краса нам підіграли, адже тут ви в постійному контакті з ними.
+    .block-style-column-2__info-wrapper
+      img(src='./assets/images/health/3.jpg' alt='img')
+  section.health-section-5.block-style-row.block-style-row-2.block-offset-top.for-patern
+    img(src='./assets/images/health/patern-1.png' alt='patern').patern-main
+    .block-style-row__left.block-offset-left
+      .dark-title Власна клініка
+      .dark-text-wrapper
+        .dark-text Коли не потрібно планувати день та витрачати час на дорогу, задоволенням може бути навіть візит до лікаря.
+        .dark-text Для цього на території міста розташований медичний центр Добробут, сімейна педіатрія, та лікарі всіх спеціалізацій.
+        .dark-text А також швидка допомога 24/7 та черговий сімейний лікар від нашої Служби комфорту.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/health/4.jpg' alt='img')
+  section.block-style-row.block-style-row-2.block-style-row-reverse.block-offset-top
+    .block-style-row__left.block-offset-right
+      .dark-title Медична евакуація
+      .dark-text-wrapper
+        .dark-text Ми, як ніхто, піклуємся про здоровʼя наших жителів. І навіть, для нечастих випадків, коли необхідна екстрена евакуація, створюємо майданчик для гелікоптера та укладаємо договір з клінікою про госпіталізацію.
+        .dark-text Дуже сподіваємось, що вона не знадобиться, і більшість часу майданчик буде використовуватись для авіапарку наших резидентів.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/health/5.jpg' alt='img')
+  section.health-section-7.block-style-row.block-style-row-2.block-offset-top.for-patern
+    img(src='./assets/images/health/patern-2.png' alt='patern').patern-main
+    .block-style-row__left.block-offset-left
+      .dark-title Комфорт для літніх людей
+      .dark-text-wrapper
+        .dark-text Старість у задоволення - це коли і медичний персонал поряд і індивідуальний догляд налагоджено, їжу доставлять та вчасно привезуть ліки.
+        .dark-text Не обовʼязково шукати спеціалізоване житло для своїх рідних, в O.Краса ми розробили окремі будинки, де вони можуть проживати недалеко від вас, з усіма благами та доглядом.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/health/6.jpg' alt='img')
+  section.health-section-8.block-style-column-4.block-offset-top
+    .block-style-column-4__text-wrapper
+      .green-subtitle Поруч з вами
+      .dark-title Здорова атмосфера
+      +svg('patern2').patern
+      .dark-text Не має значення, яка пора року за вікном, щоб стати на шлях здорового способу життя. Влітку - бігай, взимку - насолоджуйся лижними поїздками.
+    .block-style-column-4__info-wrapper.section-6
+      .swiper-container.section-6-slider.section-6-slider-2
+        .swiper-navigation-wrapper.swiper-pagination
+        .swiper-wrapper
+          .swiper-slide
+            img(src='./assets/images/health/slider/1.jpg' alt='slide')
+          .swiper-slide
+            img(src='./assets/images/health/slider/2.jpg' alt='slide')
+
+
+  section.block-style-text
+    +svg('patern').patern-1
+    .dark-text Хоча, можете бігати і взимку також, вирішувати вам. На щастя, для цього у нас достатньо інфраструктури і простору.
+    +svg('patern2').patern-2
+  a(href="space.html").block-style-nav
+    img(src='./assets/images/patern-main-1.png' alt='patern').patern-main-1
+    img(src='./assets/images/patern-main-2.png' alt='patern').patern-main-2
+    .block-style-nav-left.block-offset-left
+      .light-text Наступний розділ
+      .light-title Простір
+      .white-btn
+        span Перейти
+        +svg('arrow')
+    .block-style-nav-right
+      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      img(src='./assets/images/health/footer.jpg' alt='footer-nav').img
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

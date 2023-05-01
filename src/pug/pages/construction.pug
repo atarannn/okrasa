@@ -1,0 +1,67 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'construction'
+    var id_page = 'id-page-construction'
+    var class_page = 'class-page-construction'
+    var breadcrumbsSubitem = [
+      {
+        label: 'construction',
+        link: pagesLink[0].construction
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/construction.js')
+
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/construction/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main О.Краса
+        .light-title-main Хід будівництва
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section#section-2.inner-section
+    ul.construction_progress-list
+      li.construction_progress-card(data-open-construction-progress)
+        .left
+          .top
+            .text-style(data-date) 25 Серпень 2023 р.
+            +svg('patern2')
+            .dark-text Монтаж ліфтів Продовжується влаштування систем опалення, вентиляції, водопроводу, каналізації та електрики. Проходять фасадні роботи на торцях. Влаштування утеплення на балконах.
+          .bottom
+            +svg('patern')
+            .text-style(data-photo) 14 фото
+            .text-style(data-video) 1 видео
+        .right
+          img(data-img src="./assets/images/construction/2.jpg").img
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
+  include ../includes/construction-progress-popup

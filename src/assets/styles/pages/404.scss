@@ -1,0 +1,41 @@
+.page-404.block-style-center {
+  .block-style-center-bg {
+    &:before {
+      background-image: url("../images/404/bg.png");
+    }
+    &-info-wrapper {
+      width: 40%;
+
+      @include to(1440px) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.title-404 {
+  @include font($default-font ,300, 100%);;
+  color: $wc;
+  text-align: center;
+  font-size: var(--font-80);
+}
+
+.row-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25% 0 var(--offset-50);
+
+  .num-404 {
+    @include font($default-font2 ,400, 100%);;
+    color: $wc;
+    text-align: center;
+    font-size: var(--font-200);
+  }
+}
+.row-404-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

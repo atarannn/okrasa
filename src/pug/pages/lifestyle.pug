@@ -1,0 +1,150 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'lifestyle'
+    var id_page = 'id-page-lifestyle'
+    var class_page = 'class-page-lifestyle'
+    var breadcrumbsSubitem = [
+      {
+        label: 'lifestyle',
+        link: pagesLink[0].lifestyle
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/lifestyle-slider.js')
+
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/lifestyle/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main Місто, в якому
+        .light-title-main Більше життя
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section.block-style-text#section-2
+    +svg('patern').patern-1
+    .dark-text Ми створили власне місто так, щоб не потрібно було залишати його в пошуках гарної школи, чудового шопінгу, чи продуктивного коворкінгу. Тут все необхідне розміщене на відстані декількох кроків.
+    +svg('patern2').patern-2
+  section.block-style-row.block-style-row-2
+    .block-style-row__left.block-offset-left
+      .green-subtitle Найкраще
+      .dark-title На відстані кроків
+      .dark-text-wrapper
+        .dark-text О.Краса спроєктована по принципу 15-хвилинної доступності: до будь-якого обʼєкту інфраструктури веде продуманий маршрут. Їх артеріями є набережна та канали, які створюють "каркас", на якому розміщено всю головну інфраструктуру міста.
+        .dark-text Кафе та магазини, бари та бутикова галерея - все це по обидва боки каналу, що зʼєднуються містками. І жодного авто поряд. Уявіть!
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/lifestyle/2.jpg' alt='img')
+  section.block-style-row.block-style-row-reverse.block-style-row-2.block-offset-top
+    .block-style-row__left.block-offset-right
+      .green-subtitle Все нове,
+      .dark-title Все своє
+      .dark-text-wrapper
+        .dark-text Продуктовий супермаркет, перукарні, салони краси, центр дозвілля для дітей та дорослих, відділення Нової Пошти - все створюється "з нуля" і знаходиться біля дому.
+        .dark-text Шопінг та повсякденні покупки стануть для вас частиною прогулянок по місту. А поєднувати приємне з корисним вам допоможуть квіткові студії, винотеки, зоомагазин, пекарні та крафтові бутики.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/lifestyle/3.jpg' alt='img')
+  section.block-style-column-2
+    .block-style-column-2__text-wrapper
+      .green-subtitle Поруч з вами
+      .dark-title Бізнес квартал
+      +svg('patern2').patern
+      .dark-text В О.Красі все влаштовано так, щоб ви з легкістю могли "перемикати режими" щоденного життя. Вам не потрібно їхати до столиці, щоб провести ділову зустріч, презентацію чи конференцію. Все це ми влаштували у власному коворкінгу.
+    .block-style-column-2__info-wrapper
+      img(src='./assets/images/lifestyle/4.jpg' alt='img')
+  section.lifestyle-section-6.block-style-row.block-style-row-2.block-offset-top.for-patern
+    img(src='./assets/images/lifestyle/patern-1.png' alt='patern').patern-main
+    .block-style-row__left.block-offset-left
+      .dark-title Смак життя
+      .dark-text-wrapper
+        .dark-text Ранкова кава зі свіжими круасанами. Дружня вечірка з колегами чи свʼяткування в стильному ресторані. Дегустація власних вин в винотеці чи делікатесів з еко ферми.
+        .dark-text Всі ці маленькі радощі життя відкриваються в декількох кроках від дому.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/lifestyle/5.jpg' alt='img')
+  section.lifestyle-section-7.block-style-column-2
+    .block-style-column-2__text-wrapper
+      .green-subtitle Краса - це ще й
+      .dark-title Мистецтво та розваги
+      +svg('patern2').patern
+      .dark-text На території ми розмістили безліч прекрасних місць та арт-обʼєктів. Концерт хол для виступів та амфітеатр, щоб насолоджуватись концертами на свіжому повітрі. А як щодо перегляду улюбленого фільму під відкритим небом?
+    .block-style-column-2__info-wrapper
+      img(src='./assets/images/lifestyle/6.jpg' alt='img')
+  section.block-style-row.block-style-row-reverse.block-style-row-2.block-offset-top
+    .block-style-row__left.block-offset-right
+      .dark-title Dog's friendly
+      .dark-text-wrapper
+        .dark-text Беріть з собою чотирилапих друзів на пробіжку чи прогулянку, у парк, на набережну або ж на спортивний майданчик.
+        .dark-text Їм тут усюди будуть раді. І ви завжди знайдете лапомийки для свого друга у потрібному місці.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/lifestyle/7.jpg' alt='img')
+  section.lifestyle-section-9.block-style-column-4.block-offset-top
+    .block-style-column-4__text-wrapper
+      .dark-title Живіть в насолоді
+      +svg('patern2').patern
+      .dark-text Квітучий або засніжений парк, промені сонця, що грають на воді, чисте повітря з ароматом лісу та шелест листя замість шуму автомобілів. Все це ви знайдете в О.Краса.
+    .block-style-column-4__info-wrapper.section-6
+      .swiper-container.section-6-slider.section-6-slider-2
+        .swiper-navigation-wrapper.swiper-pagination
+        .swiper-wrapper
+          .swiper-slide
+            img(src='./assets/images/lifestyle/slider/1.jpg' alt='slide')
+            .swiper-slide-info-wrapper
+              .light-text Сонячні дні так приємно проводити в шезлонгу на набережній або ж на терасі власного подвірʼя. А як чудово освіжає в літню спеку басейн!
+          .swiper-slide
+            img(src='./assets/images/lifestyle/slider/2.jpg' alt='slide')
+            .swiper-slide-info-wrapper
+              .light-text Сонячні дні так приємно проводити в шезлонгу на набережній або ж на терасі власного подвірʼя. А як чудово освіжає в літню спеку басейн!
+          .swiper-slide
+            img(src='./assets/images/lifestyle/slider/3.jpg' alt='slide')
+            .swiper-slide-info-wrapper
+              .light-text Яскраві фарби осені у вас у дворі. Насолоджуйтесь романтикою біля каміну в будинку чи прекрасними декораціями осені на прогулянці.
+          .swiper-slide
+            img(src='./assets/images/lifestyle/slider/4.jpg' alt='slide')
+            .swiper-slide-info-wrapper
+              .light-text В домі біля каміну, чи на природі з ковзанами, зима - це час для задоволення. А тренування на свіжому повітрі чи веселі розваги зі снігом, - обирати лише вам.
+
+  section.block-style-text
+    +svg('patern').patern-1
+    .dark-text Всі чотири пори року в О.Краса по своєму неймовірні і радо діляться з вами своєю енергією. А щоб нічого не відволікало вас від насолоди життям, ми створили Службу комфорту.
+    +svg('patern2').patern-2
+  a(href="service.html").block-style-nav
+    img(src='./assets/images/patern-main-1.png' alt='patern').patern-main-1
+    img(src='./assets/images/patern-main-2.png' alt='patern').patern-main-2
+    .block-style-nav-left.block-offset-left
+      .light-text Наступний розділ
+      .light-title Безпека та сервіс
+      .white-btn
+        span Перейти
+        +svg('arrow')
+    .block-style-nav-right
+      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      img(src='./assets/images/lifestyle/footer.jpg' alt='footer-nav').img
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

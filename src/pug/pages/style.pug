@@ -1,0 +1,119 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'style'
+    var id_page = 'id-page-style'
+    var class_page = 'class-page-style'
+    var breadcrumbsSubitem = [
+      {
+        label: 'style',
+        link: pagesLink[0].style
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/style-slider.js')
+
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/style/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main Живи там, де
+        .light-title-main Більше стилю
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section.style-section-2.block-style-column-2#section-2
+    .block-style-column-2__text-wrapper-2
+      .block-style-text
+        +svg('patern').patern-1
+        .dark-text Малоповерхове місто не закриватиме від вас сонце та зорі. Замість однотипних бетонних багатоповерхівок - лише відкрите небо та природа. Головна особливість О.Краса в сусідстві різних розмірів та форматів житла, більшість з яких одно- або двоповерхові.
+        +svg('patern2').patern-2
+      .block-style-column-2__text-wrapper
+        .dark-title Архітектура, що надихає
+        +svg('patern2').patern
+        .dark-text В О.Краса різні формати житла - сітіхауси, дуплекси, приватні будинки, але всі вони обʼєднані спільною архітектурою та стилем. Колекція будинків спроектована на основі щоденних сценаріїв життя конкретних мешканців.
+    .block-style-column-2__info-wrapper
+      img(src='./assets/images/style/2.jpg' alt='img')
+  section.block-style-row.block-style-row-2.block-offset-top
+    .block-style-row__left.block-offset-left
+      .dark-title Європейська архітектура
+      .dark-text-wrapper
+        .dark-text Проектуючи місто, ми не намагались відтворити в досконалості європейську архітектуру. Нашим завданням було відібрати краще з неї, її дух та ідентичність.
+        .dark-text І на основі цього створити сучасний продукт, в якому буде відчуватись її душа.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/style/3.jpg' alt='img')
+  section.style-section-4.block-style-row.block-style-row-2.block-style-row-reverse.block-offset-top.for-patern
+    img(src='./assets/images/style/patern-1.png' alt='patern').patern-main
+    .block-style-row__left.block-offset-right
+      .dark-title Дизайн код
+      .dark-text-wrapper
+        .dark-text Всі елементи проекту - фасади, благоустрій, зони загального користування - витримані в єдиному стилі.
+        .dark-text Ми цінуємо красу і ніколи не намагаємось на ній економити. А архітектурну красу гармонічно поєднуємо з природною в єдиний ансамбль.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/style/4.jpg' alt='img')
+  section.style-section-5.block-style-column-4.block-offset-top
+    .block-style-column-4__text-wrapper
+      .green-subtitle Будинки, які
+      .dark-title Створені вражати
+    .block-style-column-4__info-wrapper.section-6
+      .swiper-container.section-6-slider.section-6-slider-2
+        .swiper-navigation-wrapper.swiper-pagination.swiper-pagination-2
+        .swiper-wrapper
+          .swiper-slide
+            img(src='./assets/images/style/slider/1.jpg' alt='slide')
+            .swiper-slide-info-wrapper.swiper-slide-info-wrapper-2
+              .dark-text Фасади оздобленні натуральним клінкером або його аналогом. Виконані в мʼяких природніх відтінках, та в поєднанні з натуральним деревом додають будинку затишку та тепла.
+          .swiper-slide
+            img(src='./assets/images/style/slider/2.jpg' alt='slide')
+            .swiper-slide-info-wrapper.swiper-slide-info-wrapper-2
+              .dark-text Всі будинки просторі та наповнені повітрям. Великі панорамні вікна до підлоги, висока стеля та друге світло забезпечують максимальну інсоляцію всіх зон будинку.
+          .swiper-slide
+            img(src='./assets/images/style/slider/3.jpg' alt='slide')
+            .swiper-slide-info-wrapper.swiper-slide-info-wrapper-2
+              .dark-text Ваш дім побудований за всіма енергозберігаючими технологіями. А будівельні матеріали ми обирали за принципом: натуральність, екологічність та якість
+
+
+
+  section.block-style-text
+    +svg('patern').patern-1
+    .dark-text На етапі проектування ми знаємо, які сервіси поблизу, а які потрібно створити в будинку, де люди будуть проводити вихідні, купувати продукти та займатись спортом.
+    +svg('patern2').patern-2
+  a(href="sport.html").block-style-nav
+    img(src='./assets/images/patern-main-1.png' alt='patern').patern-main-1
+    img(src='./assets/images/patern-main-2.png' alt='patern').patern-main-2
+    .block-style-nav-left.block-offset-left
+      .light-text Наступний розділ
+      .light-title Спорт та відпочинок
+      .white-btn
+        span Перейти
+        +svg('arrow')
+    .block-style-nav-right
+      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      img(src='./assets/images/style/footer.jpg' alt='footer-nav').img
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

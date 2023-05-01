@@ -1,0 +1,30 @@
+.lifestyle-section-5 {
+  .block-style-column-2__info-wrapper {
+    &:after {
+      background: linear-gradient(180deg, #FFFFFF 13.54%, rgba(255, 255, 255, 0) 100%);
+      height: 60%;
+    }
+  }
+}
+
+.lifestyle-section-6 {
+  .patern-main {
+    right: 0;
+    bottom: 0;
+    width: 180px;
+
+    @include to(1440px) {
+      width: 112px;
+      bottom: 20%;
+    }
+  }
+}
+
+.lifestyle-section-7 {
+  .block-style-column-2__info-wrapper {
+    &:after {
+      background: linear-gradient(180deg, #FFFFFF 15.94%, rgba(255, 255, 255, 0) 100%);
+      height: 50%;
+    }
+  }
+}

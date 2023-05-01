@@ -1,0 +1,98 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'contacts'
+    var id_page = 'id-page-contacts'
+    var class_page = 'class-page-contacts'
+    var breadcrumbsSubitem = [
+      {
+        label: 'contacts',
+        link: pagesLink[0].contacts
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+
+block content
+  section.contacts-section-1.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/contacts/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main О.Краса
+        .light-title-main Контакти
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section#section-2.contacts-section-2
+    .contacts-section-2-info
+      .dark-title Офіси продажу:
+      .contacts-section-2-info-wrapper
+        .info
+          .info-top
+            .info-subtitle в  О.Краса:
+            a(href="+380000000000").green-link +380 (00) 00-00-000
+            .grey-text м. Ірпінь, вул. Олега Кошового
+          a(href="#").main-btn
+            span Відкрити Google Maps
+            +svg('arrow')
+        .info
+          .info-top
+            .info-subtitle в  Ірпені:
+            a(href="+380976311133").green-link +380 (97) 63-111-33
+            .grey-text м. Ірпінь, вул. Тургенівска, 10, оф. 38
+          a(href="#").main-btn
+            span Відкрити Google Maps
+            +svg('arrow')
+        .info
+          .info-top
+            .info-subtitle в  Бучі:
+            a(href="+380968880782").green-link +380 (96) 888-07-82
+            .grey-text м. Буча, вул. Шевченка, 1а
+          a(href="#").main-btn
+            span Відкрити Google Maps
+            +svg('arrow')
+    form(data-form-contacts autocomplete="off").form
+      .form-title.dark-title Замовити дзвінок
+      .form-text.dark-text Залишіть контактні дані і ми обов'язково зв'яжемося з вами
+      .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive").first-offset
+        .input-title Ім’я:
+        input(type='text' name="name" placeholder="Ім’я").form-field__input
+        .input-message(data-input-message)
+      .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+        .input-title Телефон:
+        input(type='text' name="phone" placeholder="Телефон").form-field__input
+        .mask-absolute.js-mask-absolute +__ (___) __-__-___
+        .input-message(data-input-message)
+      .form-field.disabled.form-field-input(data-field-input data-field-comment data-status="field--inactive")
+        .input-title Коментар:
+        textarea(type='text' name="comment" placeholder="Коментар").form-field__input.text-input
+        .input-message(data-input-message)
+      button( type="submit" data-btn-submit).submit-btn.link.main-btn
+        span(data-btn-submit-text) Надіслати повідомлення
+        +svg('arrow')
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,204 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'terms'
+    var id_page = 'id-page-terms'
+    var class_page = 'class-page-terms'
+    var breadcrumbsSubitem = [
+      {
+        label: 'terms',
+        link: pagesLink[0].terms
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/terms-slider.js')
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/terms/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main О.Краса
+        .light-title-main Умови придбання
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section#section-2.block-offset-top.section-6.section-terms
+    .terms-info
+      .dark-title Акції
+      .info-wrapper
+        a(href="#").info
+          .dark-text-uppercase 10 травня
+          .row
+            .dark-text Старт продажу раннього раунду інвестицій!
+            +svg('arrow2')
+        a(href="#").info
+          .dark-text-uppercase 05 травня
+          .row
+            .dark-text Запрошуємо на презентацію нового котеджного містечка!
+            +svg('arrow2')
+    .swiper-container.section-6-slider.section-6-slider-4
+      .swiper-navigation-wrapper.swiper-pagination
+      .swiper-wrapper
+        .swiper-slide
+          .dark-title Вигідно та зрозуміло
+          .dark-text Оплачуєте повну вартість будинку - отримуєте гарантовано знижку у розмірі 2%, а ще приємний бонус на момент придбання. І жодних додаткових умов немає. Ми цінуємо вашу довіру.
+          .info-wrapper-1
+            .info
+              .row
+                .green-title 2
+                .green-text %
+              .dark-text Знижки від вартості обʼєкту
+            .info
+              .row
+                .green-title 0
+                .green-text грн
+              .dark-text Витрат на оформлення документів
+            .info
+              .green-title Бонус
+              .dark-text Додаткова комплектакція будинку
+          .dark-text При придбанні будинку 100% оплата зовсім не обовʼязково складається з ваших власних коштів. В суму, яка необхідна для повної оплати можуть входити і додаткові кошти, наприклад іпотека.
+          a(href="3d.html").main-btn
+            span Обрати будинок
+            +svg('arrow')
+        .swiper-slide
+          .dark-title Зручний та вигідний спосіб оплати - це придбання під виплату.
+          .dark-text Перший внесок 20%. А залишок виплачуйте протягом 3-х років. Без відсотків та збільшення вартості.
+          .text-wrapper
+            .dark-text-uppercase Стандартні умови
+            .info-wrapper-2
+              .info
+                .row
+                  .green-title 20
+                  .green-text %
+                .dark-text Перший внесок
+              .info
+                .row
+                  .green-title 3
+                  .green-text роки
+                .dark-text Термін
+              .info
+                .row
+                  .green-title 0
+                  .green-text %
+                .dark-text Переплата
+              .info
+                .row
+                  .green-title 0
+                  .green-text %
+                .dark-text Комісія
+          .text-wrapper
+            .dark-text-uppercase Ексклюзивні умови
+            .dark-text Якщо у вас немає всієї суми на перший внесок, але плануєте виплатити її протягом одного року, ми обовʼязково розглянемо, обговоримо, та запропонуємо Вам індивідуальні умови виплати.
+          .main-btn(data-call-form)
+            span Отримати консультацію
+            +svg('arrow')
+        .swiper-slide
+          .slider-top
+            .slider-top-left
+              .slider-top-left__title
+                .dark-title-2 Є
+                .dark-title Оселя
+              .info-wrapper-3
+                .info
+                  .row
+                    .green-title 3
+                    .green-text %
+                    .green-text.offset або
+                    .green-title 7
+                    .green-text %
+                  .dark-text Фіксована ставка
+                .info
+                  .row
+                    .green-text.offset-2 до
+                    .green-title 20
+                    .green-text років
+                  .dark-text Строк кредитування
+
+
+            .slider-top-right
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/b2wLoccnQ1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              .dark-text Відеоінструкція з користування послугою
+          .text-wrapper
+            .dark-text-uppercase Програма доступного кредитування житла
+            .dark-text Нова програма доступного кредитування житла, ініційована Президентом України. Чесні умови, простий механізм, фіксована ставка: 3%, якщо ви лікар, педагог чи військовослужбовець чи 7% для інших категорій.
+            .dark-text На території О.Краси є унікальний тип житла, що підпадає під критерії програми кредитування - Сітіхауси. Аппартаменти, які увібрали в себе переваги життя у приватному будинку. Адже ми, як і держава прагнемо, щоб ті, хто захищає, лікує та вчить Україну, отримали своє житло.
+          a(href="#").main-btn
+            span Обрати сітіхаус
+            +svg('arrow')
+        .swiper-slide
+          .dark-title Обмін нерухомістю без турбот
+          .dark-text За допомоги послуги trade-in, ми можемо врахувати вартість Вашої старої нерухомості як частину оплати за новий будинок. А залишкову вартість оплачуйте будь-яким зручним методом оплати.
+          .slider-text
+            .text-wrapper
+              .dark-text-uppercase Це зручно
+              .dark-text Тому що ви купуєте та продаєте в режимі "єдиного вікна". Ми займемося продажем, рекламою та переглядами Вашої нерухомості.
+            .text-wrapper
+              .dark-text-uppercase Безпечно
+              .dark-text Повний супровід угод від першого звернення і до отримання ключів від нового будинку.
+            .text-wrapper
+              .dark-text-uppercase Це економить час та сили
+              .dark-text Ми знайдемо покупця вашої нерухомості і зробимо її продаж максимально вигідним для вас.
+            .text-wrapper
+              .dark-text-uppercase Це вигідно
+              .dark-text Тому що ми зафіксуємо вартість будинку на весь час продажу старої нерухомості.
+          .main-btn(data-call-form)
+            span Залишити заявку
+            +svg('arrow')
+        .swiper-slide
+          .dark-title Програми лояльності
+          .dark-text Якщо у вас велика сімʼя, ви військовослужбовець чи переїхали, щоб розпочати нове життя у нашому місті, ми запропонуємо вам програми лояльності придбання житла у О.Краса. Вигідні, без переплат та з розумінням.
+          .info-wrapper-4
+            .info-row
+              img(src='./assets/images/terms/1.png' alt='img')
+              .col
+                .dark-text-uppercase Військовослужбовці
+                .dark-text Захищаєте нашу країну - ми захищатимемо ваш дім. Та оберемо найзручніші умови виплати та знижки.
+            .info-row
+              img(src='./assets/images/terms/2.png' alt='img')
+              .col
+                .dark-text-uppercase Корпоративні знижки
+                .dark-text Індивідуальні умови на придбання житла для своїх співробітників та колег.
+            .info-row
+              img(src='./assets/images/terms/3.png' alt='img')
+              .col
+                .dark-text-uppercase Внутрішньо-переміщенні особи
+                .dark-text Допоможемо обрати новий дім та нове життя у нашому місті за найвигіднішими умовами.
+            .info-row
+              img(src='./assets/images/terms/4.png' alt='img')
+              .col
+                .dark-text-uppercase Велика сімʼя
+                .dark-text Купуйте другий будинок для родичів чи своїх батьків, щоб жили поруч з Вами? Ми запропонуємо додаткові знижки.
+
+          .main-btn(data-call-form)
+            span Отримати консультацію
+            +svg('arrow')
+
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

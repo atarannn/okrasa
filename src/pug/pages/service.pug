@@ -1,0 +1,158 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'service'
+    var id_page = 'id-page-service'
+    var class_page = 'class-page-service'
+    var breadcrumbsSubitem = [
+      {
+        label: 'service',
+        link: pagesLink[0].service
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/arrow-up.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/social-btn.js')
+  script(defer src='./assets/scripts/service-slider.js')
+
+block content
+  section.section-1.block-style-center
+    .block-style-center-bg
+      img(src='./assets/images/service/1.jpg' alt='img')
+      .block-style-center-bg-info-wrapper
+        .subtitle-main Живи там, де
+        .light-title-main Безпека та сервіс
+        +svg('patern3')
+    .block-style-center-info-wrapper
+      a(href="#section-2").section-1-info-1.arrow-down
+        +svg('arrow2')
+        .light-uppercase-text Дізнатися більше
+    img(src='./assets/images/home/section-1/patern-1.png' alt='patern').patern-main.patern-main-1
+    img(src='./assets/images/home/section-1/patern-2.png' alt='patern').patern-main.patern-main-2
+  section.block-style-text#section-2
+    +svg('patern').patern-1
+    .dark-text Врахувавши можливі щоденні клопоти та турботи, ми потурбувались, щоб ваше життя в O.Kраса було максимально безпечним, комфортним та зручним.
+    +svg('patern2').patern-2
+  section.block-style-row.block-style-row-2
+    .block-style-row__left.block-offset-left
+      .green-subtitle Живи там, де
+      .dark-title Красиво та безпечно
+      .dark-text-wrapper
+        .dark-text Простір O.Краса знаходиться під надійним захистом, тому що його територія закрита по периметру та знаходиться під охороною. Цілодобовий відеонагляд охоплює всі ділянки, що прилягають ззовні та громадські локації всередині. А вʼїзд на територію можливий лише за електронною картою резидента.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/service/2.jpg' alt='img')
+  section.block-style-row.block-style-row-2.block-style-row-reverse.block-offset-top
+    .block-style-row__left.block-offset-right
+      .dark-title Дублюючі комунікації
+      .dark-text-wrapper
+        .dark-text О.Краса підключена до міських мереж, проте має свої дублюючі комунікації. Вимкнули світло через технічні проблеми - в O.Краса передбачено мережу генераторів. Вимкнули воду - на допомогу стануть артезіанські свердловини та автономна каналізація.
+        .dark-text А ще, пласкі дахи ідеально підходять для встановлення сонячних батарей.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/service/3.jpg' alt='img')
+  section.block-style-row.block-style-row-2.block-offset-top
+    .block-style-row__left.block-offset-left
+      .dark-title Сонячний парк
+      .dark-text-wrapper
+        .dark-text Ми прихильники екології та відновлюваних джерел енергії. Тож розмістили в місті власний сонячний парк, що забезпечує електроенергією всю його внутрішню інфраструктуру.
+        .dark-text А в особливо ясні дні, електростанція накопичує енергію для містян.
+    .block-style-row__right.block-offset-right-2
+      img(src='./assets/images/service/4.jpg' alt='img')
+  section.service-section-7.block-style-column-4.block-offset-top
+    .block-style-column-4__text-wrapper
+      .green-subtitle Живи там, де
+      .dark-title Бездоганний сервіс
+      +svg('patern2').patern
+      .dark-text Щоб ви могли частіше відпочивати, ми створили обслуговуючу компанію. Більше не доведеться шукати електрика чи сантехніка та відкладати свої плани на потім. Садівники приведуть в порядок подвірʼя, хатня господиня витре підлогу, а власні майстри полагодять все якнайшвидше.
+    .block-style-column-4__info-wrapper.section-6
+      .swiper-container.section-6-slider.section-6-slider-2
+        .swiper-navigation-wrapper.swiper-pagination
+        .swiper-wrapper
+          .swiper-slide
+            img(src='./assets/images/service/slider/1.jpg' alt='slide')
+            .swiper-slide-info-wrapper
+              .col
+                img(src='./assets/images/service/slider/1.png' alt='slide')
+                .light-text Косіння газону
+              .col
+                img(src='./assets/images/service/slider/2.png' alt='slide')
+                .light-text Садівник
+              .col
+                img(src='./assets/images/service/slider/3.png' alt='slide')
+                .light-text Вивіз сміття
+          .swiper-slide
+            img(src='./assets/images/service/slider/2.jpg' alt='slide')
+            .swiper-slide-info-wrapper
+              .col
+                img(src='./assets/images/service/slider/4.png' alt='slide')
+                .light-text Послуги няні
+              .col
+                img(src='./assets/images/service/slider/5.png' alt='slide')
+                .light-text Ремонтні роботи
+              .col
+                img(src='./assets/images/service/slider/6.png' alt='slide')
+                .light-text Клінінг
+              .col
+                img(src='./assets/images/service/slider/7.png' alt='slide')
+                .light-text Доставка
+          .swiper-slide
+            img(src='./assets/images/service/slider/3.jpg' alt='slide')
+            .swiper-slide-info-wrapper
+              .col
+                img(src='./assets/images/service/slider/8.png' alt='slide')
+                .light-text Вигул собак
+              .col
+                img(src='./assets/images/service/slider/9.png' alt='slide')
+                .light-text Міський патруль
+              .col
+                img(src='./assets/images/service/slider/10.png' alt='slide')
+                .light-text Обслуговування території
+
+
+  section.service-section-7.block-style-row.block-style-row-2.block-style-row-reverse.block-offset-top.for-patern
+    img(src='./assets/images/service/patern-1.png' alt='patern').patern-main
+    .block-style-row__left.block-offset-right
+      .dark-title Місто в телефоні
+      .dark-text-wrapper
+        .dark-text Бути резидентом міста - це мати доступ до усіх його привілеїв. Один клік - і вам раді прийти на допомогу. Консьєрж сервіс, виклик охорони, чи просто повісити гардину - ми зібрали ці функції в зручному застосунку.
+        .dark-text Батьки також отримують доступ до камер відеоспостереження, що встановлені на ігрових майданчиках чи дитячому центрі.
+    .block-style-row__right.block-offset-left-2
+      img(src='./assets/images/service/5.jpg' alt='img')
+  section.block-style-text
+    +svg('patern').patern-1
+    .dark-text І навіть, якщо вам буде потрібна допомога у вихідний день, ви не почуєте: "Ваш дзвінок важливий для нас, ми зателефонуємо у понеділок". Служба комфорту працює 24/7, бо ми знаємо, як це нервує.
+    +svg('patern2').patern-2
+  a(href="health.html").block-style-nav
+    .block-style-nav-left.block-offset-left
+      .light-text Наступний розділ
+      .light-title Здоров'я
+      .white-btn
+        span Перейти
+        +svg('arrow')
+    .block-style-nav-right
+      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      img(src='./assets/images/service/footer.jpg' alt='footer-nav').img
+
+
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
