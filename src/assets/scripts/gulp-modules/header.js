@@ -1,3 +1,5 @@
+const isMobile = window.matchMedia('(max-width: 600px)').matches;
+
 window.onload = function () {
   const header = document.querySelector('header');
 
@@ -7,10 +9,15 @@ window.onload = function () {
   window.setTimeout(() => {
     document.body.classList.add('loaded');
     document.body.classList.remove('loaded_hiding');
+    if (isMobile) return;
     header.classList.remove('close');
     header.classList.add('open');
   }, 1000);
 
+  if (isMobile) {
+    mobileHeaderHandler();
+    return;
+  }
   header.addEventListener('mouseover', () => {
     header.classList.add('open');
     header.classList.remove('close');
@@ -30,22 +37,22 @@ document.onscroll = function () {
 function scrollFunction() {
   const header = document.querySelector('header');
 
-  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-    header.classList.remove('open');
-    header.classList.add('close');
-  }
+  // if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+  //   header.classList.remove('open');
+  //   header.classList.add('close');
+  // }
 
-  if (header.classList.contains('close')) {
-    header.addEventListener('mouseover', () => {
-      header.classList.add('open');
-      header.classList.remove('close');
-    });
+  // if (header.classList.contains('close')) {
+  //   header.addEventListener('mouseover', () => {
+  //     header.classList.add('open');
+  //     header.classList.remove('close');
+  //   });
 
-    header.addEventListener('mouseout', () => {
-      header.classList.remove('open');
-      header.classList.add('close');
-    });
-  }
+  //   header.addEventListener('mouseout', () => {
+  //     header.classList.remove('open');
+  //     header.classList.add('close');
+  //   });
+  // }
 }
 
 function chooseApartment() {
@@ -83,7 +90,22 @@ function headerMenuInner() {
 };
 
 function init() {
-  headerMenuInner();
+  if (!isMobile) headerMenuInner();
+}
+
+function mobileHeaderHandler() {
+  const header = document.querySelector('header');
+  document.body.addEventListener('click',function(evt){
+    const target = evt.target.closest('.header__menu-open');
+    if (!target) return;
+    header.classList.toggle('open');
+    header.classList.toggle('close');
+  });
+  // document.body.addEventListener('click',function(evt){
+  //   const target = evt.target.closest('.header__menu-open');
+  //   if (!target) return;
+  //   header.classList.add('open');
+  // });
 }
 
 window.addEventListener('DOMContentLoaded', init);
