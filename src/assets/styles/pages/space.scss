@@ -16,6 +16,11 @@
     @include to(1440px) {
       width: 202px;
     }
+
+    @include to(1024px) {
+      width: 145px;
+      top: 50%;
+    }
   }
 
   .block-style-column-2__info-wrapper {

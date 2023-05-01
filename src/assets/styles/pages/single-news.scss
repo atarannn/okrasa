@@ -8,6 +8,10 @@
     top: var(--offset-100);
     z-index: 10;
 
+    @include to(1024px) {
+      left: var(--offset-20);
+    }
+
     svg {
       width: 35px;
       transform: rotate(180deg);
@@ -28,6 +32,10 @@
       padding: 0 17%;
     }
 
+    @include to(1024px) {
+      padding: 0 calc(var(--btn-h) + var(--offset-20)*2);
+    }
+
     .patern-main {
       position: absolute;
       z-index: 2;
@@ -43,6 +51,10 @@
       @include to(1440px) {
         width: 155px;
       }
+
+      @include to(1024px) {
+        display: none;
+      }
     }
 
     .patern-main-2 {
@@ -52,6 +64,10 @@
 
       @include to(1440px) {
         width: 197px;
+      }
+
+      @include to(1024px) {
+        display: none;
       }
     }
 
@@ -88,6 +104,10 @@
 
       @include to(1440px) {
         height: 505px;
+      }
+
+      @include to(1024px) {
+        height: 346px;
       }
     }
 
@@ -138,10 +158,19 @@
     padding: var(--block-offset-top) var(--offset-100) 0;
     gap: var(--offset-50);
 
+    @include to(1024px) {
+      padding: var(--block-offset-top) var(--offset-20) 0;
+      gap: 40px;
+    }
+
     &-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--offset-20);
+
+      @include to(1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 }

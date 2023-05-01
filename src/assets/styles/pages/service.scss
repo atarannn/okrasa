@@ -1,4 +1,9 @@
 .service-section-7 {
+  .block-style-row__right {
+    @include to(1024px) {
+      height: auto;
+    }
+  }
   .patern-main {
     right: 0;
     top: -10%;

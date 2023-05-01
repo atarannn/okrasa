@@ -1,3 +1,11 @@
+#home-page {
+  @include to(1024px) {
+    .section-6 .section-6-slider .swiper-wrapper {
+      height: 724px;
+    }
+  }
+}
+
 .section-1, .section-3, .section-4, .section-7, .section-9, .section-10 {
   position: relative;
 
@@ -498,7 +506,7 @@
       height: 100vh;
 
       @include to(1024px) {
-        height: 724px;
+        height: 884px;
       }
 
       .swiper-slide {
@@ -720,6 +728,10 @@
         &.swiper-pagination {
           padding: 0;
           margin-bottom: 75px;
+
+          @include to(1024px) {
+            margin-bottom: 36px;
+          }
         }
 
         .swiper-pagination-bullet {
@@ -769,6 +781,14 @@
           width: 100%;
           height: auto;
 
+          @include to(1024px) {
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            height: fit-content;
+            gap: 40px;
+            padding-bottom: 0;
+          }
+
           .left {
             width: 40%;
             padding-right: var(--offset-178);
@@ -781,6 +801,12 @@
               width: 50%;
             }
 
+            @include to(1024px) {
+              width: 100%;
+              padding: 0 12%;
+              align-items: center;
+            }
+
             .logo-1 {
               margin-bottom: var(--offset-60);
               height: 74px;
@@ -789,6 +815,10 @@
 
               @include to(1440px) {
                 height: 65px;
+              }
+
+              @include to(1024px) {
+                object-position: center;
               }
             }
 
@@ -801,6 +831,10 @@
               @include to(1440px) {
                 height: 107px;
               }
+
+              @include to(1024px) {
+                object-position: center;
+              }
             }
 
             .logo-3 {
@@ -812,6 +846,10 @@
               @include to(1440px) {
                 height: 75px;
               }
+
+              @include to(1024px) {
+                object-position: center;
+              }
             }
 
             .text-wrapper {
@@ -821,8 +859,16 @@
               justify-content: flex-start;
               gap: var(--offset-20);
 
+              @include to(1024px) {
+                align-items: center;
+              }
+
               .dark-text {
                 text-align: left;
+
+                @include to(1024px) {
+                  text-align: center;
+                }
               }
             }
 
@@ -834,6 +880,11 @@
               justify-content: space-between;
               gap: var(--offset-20);
 
+              @include to(1024px) {
+                align-items: center;
+                justify-content: center;
+              }
+
               .info {
                 display: flex;
                 flex-direction: column;
@@ -841,6 +892,10 @@
                 justify-content: flex-start;
                 gap: var(--offset-20);
                 width: 50%;
+
+                @include to(1024px) {
+                  align-items: center;
+                }
 
                 .row {
                   display: flex;
@@ -867,6 +922,10 @@
                   color: $bc;
                   font-size: var(--font-20);
                   text-align: left;
+
+                  @include to(1024px) {
+                    text-align: center;
+                  }
                 }
               }
             }
@@ -874,6 +933,10 @@
             .main-btn {
               margin-top: var(--offset-40);
               width: 100%;
+
+              @include to(1024px) {
+                width: 354px;
+              }
             }
           }
 
@@ -884,9 +947,18 @@
               width: 50%;
             }
 
+            @include to(1024px) {
+              width: 100%;
+              padding: 0 10%;
+            }
+
             img {
               object-fit: contain;
-              object-position: center;
+              object-position: right;
+
+              @include to(1024px) {
+                object-position: center;
+              }
             }
           }
         }
@@ -907,6 +979,11 @@
         height: 90vh;
       }
 
+      @include to(1024px) {
+        width: 100%;
+        height: 80vh;
+      }
+
       .swiper-navigation-wrapper {
         flex-direction: column;
         width: auto;
@@ -918,6 +995,11 @@
         @include to(1440px) {
           top: -10%;
           height: 100vh;
+        }
+
+        @include to(1024px) {
+          top: -5%;
+          height: 90vh;
         }
 
         &.swiper-pagination {
@@ -1029,6 +1111,10 @@
             padding-left: 30%;
           }
 
+          @include to(1024px) {
+            padding-left: 35%;
+          }
+
           .dark-title {
             font-size: var(--font-48);
             text-align: left;
@@ -1040,6 +1126,7 @@
             font-size: var(--font-24);
             text-align: left;
             text-transform: uppercase;
+
           }
 
           .slider-text {
@@ -1081,7 +1168,7 @@
             width: 100%;
 
             .info {
-              width: 48%;
+              width: 45%;
             }
           }
 
@@ -1115,11 +1202,15 @@
             }
 
             .info-row {
-              width: 48%;
+              width: 45%;
               display: flex;
               align-items: flex-start;
               justify-content: flex-start;
               gap: 12px;
+
+              @include to(1024px) {
+                flex-direction: column;
+              }
 
               img {
                 height: 70px;
@@ -1245,6 +1336,10 @@
 
                 @include to(1440px) {
                   height: 250px;
+                }
+
+                @include to(1024px) {
+                  height: 200px;
                 }
               }
 

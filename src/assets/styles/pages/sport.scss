@@ -17,6 +17,11 @@
       width: 168px;
       top: 0;
     }
+
+    @include to(1024px) {
+      width: 145px;
+      top: 40%;
+    }
   }
 }
 
@@ -27,6 +32,11 @@
     grid-template-columns: repeat(4, 1fr);
     gap: var(--offset-20);
     padding: 0 var(--offset-100);
+
+    @include to(1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 var(--block-offset-right) 0  var(--block-offset-left);
+    }
 
     .sport-section-6-card {
       --sport-card-h: 500px;
@@ -153,6 +163,10 @@
     @include to(1440px) {
       top: -10%;
       width: 112px;
+    }
+
+    @include to(1024px) {
+      display: none;
     }
   }
 }

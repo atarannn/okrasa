@@ -5,6 +5,10 @@
   padding: 0 var(--header-w);
   margin: var(--block-offset-top) 0;
 
+  @include to(1024px) {
+    padding: 0 var(--block-offset-right);
+  }
+
   &-info, .form {
     width: 50%;
   }

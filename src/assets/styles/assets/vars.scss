@@ -113,6 +113,8 @@ $brown: #CCC7BF;
 
 @media screen and (max-width: 1024px) {
   :root {
+    --font-24: 16px;
+
     --offset-178: 20px;
     --offset-100: 100px;
     --offset-132: 20px;
@@ -131,6 +133,9 @@ $brown: #CCC7BF;
     --swiper-padding-3: 20px;
 
     --home-swiper-1-top-offset: 220px;
+
+    --footer-offset: 70px;
+    --footer-offset-2: 40px;
 
     --block-column-offset-2: 100px;
   }

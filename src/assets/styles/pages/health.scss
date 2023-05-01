@@ -25,6 +25,10 @@
     @include to(1440px) {
       width: 200px;
     }
+
+    @include to(1024px) {
+      display: none;
+    }
   }
 }
 

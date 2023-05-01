@@ -17,5 +17,19 @@
       width: 168px;
       top: 0;
     }
+
+    @include to(1024px) {
+      width: 145px;
+      top: 55%;
+    }
+  }
+}
+
+.style-section-5 {
+  .section-6 .section-6-slider.section-6-slider-2 .swiper-wrapper .swiper-slide {
+    &:before {
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      height: 55%;
+    }
   }
 }

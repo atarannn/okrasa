@@ -17,6 +17,11 @@
       width: 168px;
       top: -15%;
     }
+
+    @include to(1024px) {
+      width: 145px;
+      top: -8%;
+    }
   }
 }
 
@@ -29,6 +34,10 @@
     @include to(1440px) {
       width: 112px;
       bottom: 20%;
+    }
+
+    @include to(1024px) {
+      display: none;
     }
   }
 }

@@ -6,6 +6,14 @@
   padding-right: var(--offset-100);
   gap: var(--offset-100);
 
+  @include to(1024px) {
+    flex-direction: column-reverse;
+    padding-left: var(--block-offset-left);
+    padding-right: var(--block-offset-right);
+    padding-bottom: var(--block-offset-top);
+    gap: 0;
+  }
+
   .terms-info {
     width: 20%;
     display: flex;
@@ -13,6 +21,11 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 32px;
+
+    @include to(1024px) {
+      width: 100%;
+      gap: var(--offset-20);
+    }
 
     .dark-title {
       font-size: var(--font-48);
@@ -26,6 +39,11 @@
       justify-content: flex-start;
       width: 100%;
 
+      @include to(1024px) {
+        flex-direction: row;
+        border-top: 1px solid #F3EFE2;
+      }
+
       .info {
         display: flex;
         flex-direction: column;
@@ -36,8 +54,17 @@
         border-bottom: 1px solid #F3EFE2;
         padding: 32px 0;
 
+        @include to(1024px) {
+          width: 50%;
+          border-bottom: none;
+        }
+
         &:first-child {
           border-top: 1px solid #F3EFE2;
+
+          @include to(1024px) {
+            border-top: none;
+          }
         }
 
         .dark-text-uppercase {

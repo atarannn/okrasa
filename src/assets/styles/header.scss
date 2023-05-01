@@ -286,6 +286,18 @@
   bottom: var(--offset-40);
   z-index: 100;
 
+  .open {
+    @include to(1440px) {
+      height: 20px;
+    }
+  }
+
+  .close {
+    @include to(1440px) {
+      height: 40px;
+    }
+  }
+
   .callback-btn {
     height: var(--btn-h-2);
     width: var(--btn-h-2);
@@ -344,6 +356,10 @@
       opacity: 0;
       visibility: hidden;
       transition: all .3s ease-in-out;
+
+      svg {
+        height: 20px;
+      }
     }
   }
 }
@@ -408,7 +424,7 @@
       width: 100%;
       transform: translateZ(0);
 
-      @include to(1024px) {
+      @include to(1440px) {
         height: 20px;
       }
     }
