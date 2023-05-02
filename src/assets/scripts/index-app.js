@@ -103,3 +103,33 @@ contacts.forEach((contacts) => {
     })
   }
 });
+
+
+
+document.querySelectorAll('.block-style-column__mobile-slider').forEach(handleMobileBlockImageHorizontalScroll);
+
+
+function handleMobileBlockImageHorizontalScroll(el) {
+  const parent = el.closest('section');
+  const slider = parent.querySelector('input');
+  const sliderSvg = el;
+  const slideSvgButton = sliderSvg.querySelector('.swipe');
+  const slideSvgButtonRadius = +slideSvgButton.querySelector('circle').getAttribute('r');
+  const imageScrollContainer = parent.querySelector('.block-style-column__mobile-scroller');
+  const sliderSvgWidth = sliderSvg.getAttribute('viewBox').split(' ')[2];
+
+  slider.value = 0;
+  slider.setAttribute('max', imageScrollContainer.scrollWidth);
+
+  slider.addEventListener('input', (evt) => {
+    imageScrollContainer.scrollTo(evt.target.value - window.innerWidth ,0);
+
+    const swipeXoffset = gsap.utils.mapRange(
+      0 ,
+      evt.target.getAttribute('max'),
+      slideSvgButtonRadius * 2, sliderSvgWidth, 
+      evt.target.value
+    );
+    slideSvgButton.setAttribute('transform', `translate(${swipeXoffset - (slideSvgButtonRadius * 2)} ,0)`)
+  });
+}
