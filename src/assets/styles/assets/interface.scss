@@ -123,6 +123,10 @@
     gap: 8px;
     min-width: 261px;
   }
+
+  @include to(1024px) {
+    min-width: 100%;
+  }
 }
 
 
@@ -1210,6 +1214,10 @@
     height: 280px;
   }
 
+  @include to(680px) {
+    height: 200px;
+  }
+
   .patern-main-1 {
     position: absolute;
     left: 0;
@@ -1229,6 +1237,10 @@
       top: -25%;
       left: -5%;
     }
+
+    @include to(680px) {
+      top: -36%;
+    }
   }
 
   .patern-main-2 {
@@ -1246,6 +1258,10 @@
 
     @include to(1024px) {
       width: 125px;
+    }
+
+    @include to(680px) {
+      bottom: -35%;
     }
   }
 
@@ -1268,6 +1284,10 @@
     @include to(1024px) {
       width: 50%;
     }
+
+    @include to(680px) {
+      width: 60%;
+    }
   }
 
   &-right {
@@ -1277,6 +1297,10 @@
 
     @include to(1024px) {
       width: 50%;
+    }
+
+    @include to(680px) {
+      width: 40%;
     }
 
     .arrow-green {

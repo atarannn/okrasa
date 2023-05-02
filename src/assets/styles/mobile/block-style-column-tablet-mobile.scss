@@ -15,7 +15,7 @@
             bottom: calc(var(--offset-50) + 20px);
             width: calc(100% - 20px);
             left: 10px;
-            height: auto; 
+            height: auto;
             z-index: 4;
         }
         input  {
@@ -24,7 +24,7 @@
             bottom: calc(var(--offset-50) + 35px);
             // transform: scaleY(1.5);
             opacity: 0;
-            
+
             margin-bottom: -10px;
             &::-webkit-slider-thumb {
                 -webkit-appearance: none;
@@ -44,7 +44,7 @@
             pointer-events: none;
         }
         &__mobile-scroller {
-            height: calc(100vh - var(--header-h));
+            height: auto;
             width: 100%;
             overflow-x: auto;
             overflow-y: hidden;
@@ -67,7 +67,7 @@
             &--desktop {
                 display: none;
             }
-            
+
         }
     }
 }
