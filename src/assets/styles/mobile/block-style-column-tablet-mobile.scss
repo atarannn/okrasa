@@ -72,5 +72,42 @@
     }
 }
 
+.mobile {
+    .block-style-column-3 {
+        &__map {
+            // padding-bottom: 100vh;
+        }
+
+        &__map-1 {
+            align-content: flex-start;
+            &__info {
+                height: auto;
+            }
+        }
+
+        &__map-2,
+        &__map-1 {
+            height: calc(100vh - var(--btn-h));
+        }
+        &__map-bottom {
+            flex-direction: column;
+            background-color: transparent;
+            height: auto;
+            .switch-wrapper {
+                background: #F5F5F5;
+                /* Light Gray */
+
+                border: 1px solid #EBEBEB;
+                border-inline-color: transparent;
+                padding-block: 8px;
+                width: 100%;
+                .text {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
 
 

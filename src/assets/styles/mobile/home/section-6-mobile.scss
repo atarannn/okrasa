@@ -1,0 +1,37 @@
+.mobile {
+    .section-6 {
+        &-slider {
+            .swiper-navigation-wrapper.swiper-pagination {
+                display: grid;
+                column-gap: 6px;
+                row-gap: 4px;
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: repeat(2, 50%);
+                --swiper-padding-2: 35px;
+                .swiper-pagination-bullet {
+                    border: 1px solid $green;
+                    border-inline-color: transparent;
+                    border-radius: 0;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 38px;
+                    padding-bottom: 0;
+                    color: $bc;
+                    &.swiper-pagination-bullet-active {
+                        background-color: $green;
+                        color: $wc;
+                    }
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                    .animation-line {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

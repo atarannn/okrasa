@@ -1,0 +1,24 @@
+.mobile {
+    .section-1 {
+        --home-swiper-1-top-offset: calc(var(--header-h) +  20px);
+        .swiper-pagination {
+            display: none;
+        }
+        .swiper-wrapper .swiper-slide-info-wrapper{
+            max-width: 75%;
+        }
+        &-info-wrapper {
+            
+            grid-template-areas: "block2";
+            grid-template-rows: 100%;
+            grid-template-columns: 100%;
+            gap: 0;
+            .section-1-info-block-3 {
+                display: none;
+            }
+            .arrow-down {
+                display: none;
+            }
+        }
+    }
+}
