@@ -78,7 +78,13 @@ block content
         .dark-title Спорт для всіх
         +svg('patern2').patern
         .dark-text Найкращий у світі спортзал той, що відкритий будь-якої пори року. В місті передбачено кілька workout зон для різного віку, спортивні поля для активних ігор та мережа бігових і вело-доріжок. Хто ж відмовиться від персонального спортзалу на свіжому повітрі?
-    .block-style-column-2__info-wrapper.height-140vh
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--mobile
+      input(type="range", name="aaaa")
+      include ../includes/block-style-column-mobile-image-scroller-svg.pug
+      .mobile-text.light-uppercase-text Прогуляйтесь кварталом
+      div.block-style-column__mobile-scroller
+        img(src='./assets/images/sport/2.jpg' alt='img')
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--desktop
       .mobile-text.light-uppercase-text Прогуляйтесь кварталом
       img(src='./assets/images/sport/2.jpg' alt='img')
   section.block-style-row.block-style-row-2.block-offset-top
@@ -103,7 +109,13 @@ block content
       .dark-title Алло! Ми вдома граємо в баскетбол!
       +svg('patern2').patern
       .dark-text Бути здоровим, активним та отримувати задоволення від кожного моменту життя - це і є щастя! Саме заради цього ми створили багатофункціональні спортивні майданчики.
-    .block-style-column__info-wrapper.height-100vh
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--mobile
+      input(type="range", name="aaaa")
+      include ../includes/block-style-column-mobile-image-scroller-svg.pug
+      .mobile-text.light-uppercase-text Прогуляйтесь кварталом
+      div.block-style-column__mobile-scroller
+        img(src='./assets/images/sport/5.jpg' alt='img')
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--desktop
       .mobile-text.light-uppercase-text Прогуляйтесь кварталом
       img(src='./assets/images/sport/5.jpg' alt='img')
   section.sport-section-6.block-style-column-4.block-offset-top.for-patern

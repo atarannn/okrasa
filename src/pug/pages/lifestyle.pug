@@ -72,7 +72,13 @@ block content
       .dark-title Бізнес квартал
       +svg('patern2').patern
       .dark-text В О.Красі все влаштовано так, щоб ви з легкістю могли "перемикати режими" щоденного життя. Вам не потрібно їхати до столиці, щоб провести ділову зустріч, презентацію чи конференцію. Все це ми влаштували у власному коворкінгу.
-    .block-style-column-2__info-wrapper
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--mobile
+      input(type="range", name="aaaa")
+      include ../includes/block-style-column-mobile-image-scroller-svg.pug
+      .mobile-text.light-uppercase-text Прогуляйтесь кварталом
+      div.block-style-column__mobile-scroller
+        img(src='./assets/images/lifestyle/4.jpg' alt='img')
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--desktop
       .mobile-text.light-uppercase-text Прогуляйтесь кварталом
       img(src='./assets/images/lifestyle/4.jpg' alt='img')
   section.lifestyle-section-6.block-style-row.block-style-row-2.block-offset-top.for-patern
@@ -90,7 +96,13 @@ block content
       .dark-title Мистецтво та розваги
       +svg('patern2').patern
       .dark-text На території ми розмістили безліч прекрасних місць та арт-обʼєктів. Концерт хол для виступів та амфітеатр, щоб насолоджуватись концертами на свіжому повітрі. А як щодо перегляду улюбленого фільму під відкритим небом?
-    .block-style-column-2__info-wrapper
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--mobile
+      input(type="range", name="aaaa")
+      include ../includes/block-style-column-mobile-image-scroller-svg.pug
+      .mobile-text.light-uppercase-text Прогуляйтесь кварталом
+      div.block-style-column__mobile-scroller
+        img(src='./assets/images/lifestyle/6.jpg' alt='img')
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--desktop
       .mobile-text.light-uppercase-text Прогуляйтесь кварталом
       img(src='./assets/images/lifestyle/6.jpg' alt='img')
   section.block-style-row.block-style-row-reverse.block-style-row-2.block-offset-top

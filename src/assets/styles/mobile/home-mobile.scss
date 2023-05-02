@@ -1,0 +1,25 @@
+.mobile {
+  .section-1 {
+    .patern-main-1, .patern-main-2, .arrow-down, .swiper-navigation-wrapper.swiper-pagination, .section-1-info-block-2, .section-1-info-block-3 svg {
+      display: none;
+    }
+
+    &-slider {
+      .swiper-wrapper {
+        .swiper-slide-info-wrapper {
+          max-width: calc(100% - var(--offset-20)*2);
+          top: calc(var(--header-h) + var(--offset-20));
+        }
+      }
+    }
+
+    &-info-wrapper {
+      width: calc(100% - var(--block-offset-left) - var(--btn-h-2) - var(--offset-20)*2);
+      bottom: var(--offset-20);
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+}

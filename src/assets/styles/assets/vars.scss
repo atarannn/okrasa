@@ -140,3 +140,42 @@ $brown: #CCC7BF;
     --block-column-offset-2: 100px;
   }
 }
+
+@media screen and (max-width: 680px) {
+  :root {
+    --offset-178: 20px;
+    --offset-100: 100px;
+    --offset-132: 20px;
+
+    --font-12: 12px;
+    --font-14: 12px;
+    --font-16: 14px;
+    --font-20: 15px;
+    --font-24: 16px;
+    --font-32: 20px;
+    --font-48: 24px;
+    --font-80: 36px;
+    --font-120: 48px;
+    --font-200: 72px;
+
+    --logo-h: 38px;
+    --header-h: 58px;
+    --header-w: 100%;
+
+    --btn-h: 46px;
+    --btn-h-2: 42px;
+
+    --block-offset-right: 20px;
+    --block-offset-left: 20px;
+
+    --swiper-padding: 20px;
+    --swiper-padding-3: 20px;
+
+    --home-swiper-1-top-offset: 220px;
+
+    --footer-offset: 70px;
+    --footer-offset-2: 40px;
+
+    --block-column-offset-2: 100px;
+  }
+}
