@@ -70,7 +70,10 @@ block content
               span Сайт компанії
               +svg('arrow')
           .right
-            img(src='./assets/images/creators/slider/1.png' alt='slide')
+            picture
+              source(srcset="./assets/images/creators/slider/1.png" media="(min-width: 1024px)")
+              img(src="./assets/images/creators/slider/1-mob.png")
+
         .swiper-slide
           .left
             img(src='./assets/images/creators/slider/2.svg' alt='logo').logo-2
@@ -88,7 +91,10 @@ block content
               span Сайт компанії
               +svg('arrow')
           .right
-            img(src='./assets/images/creators/slider/2.png' alt='slide')
+            picture
+              source(srcset="./assets/images/creators/slider/2.png" media="(min-width: 1024px)")
+              img(src="./assets/images/creators/slider/2-mob.png")
+
         .swiper-slide
           .left
             img(src='./assets/images/creators/slider/3.svg' alt='logo').logo-3
@@ -108,7 +114,9 @@ block content
               span Сайт компанії
               +svg('arrow')
           .right
-            img(src='./assets/images/creators/slider/3.png' alt='slide')
+            picture
+              source(srcset="./assets/images/creators/slider/3.png" media="(min-width: 1024px)")
+              img(src="./assets/images/creators/slider/3-mob.png")
 
 block footer
   include ../includes/footer.pug

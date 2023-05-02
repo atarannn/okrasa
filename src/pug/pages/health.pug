@@ -61,7 +61,13 @@ block content
       .dark-title Чисте повітря
       +svg('patern2').patern
       .dark-text Те, чим ми дихаємо та у якому середовищі живемо, відіграє значну роль для здоровʼя. Погоджуємось, природа та екологія в О.Краса нам підіграли, адже тут ви в постійному контакті з ними.
-    .block-style-column-2__info-wrapper
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--mobile
+      input(type="range", name="aaaa")
+      include ../includes/block-style-column-mobile-image-scroller-svg.pug
+      .mobile-text.light-uppercase-text Прогуляйтесь кварталом
+      div.block-style-column__mobile-scroller
+        img(src='./assets/images/health/3.jpg' alt='img')
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--desktop
       .mobile-text.light-uppercase-text Прогуляйтесь кварталом
       img(src='./assets/images/health/3.jpg' alt='img')
   section.health-section-5.block-style-row.block-style-row-2.block-offset-top.for-patern
@@ -122,7 +128,9 @@ block content
         span Перейти
         +svg('arrow')
     .block-style-nav-right
-      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      picture
+        source(srcset="./assets/images/arrow-green.svg" media="(min-width: 1024px)")
+        img(src="./assets/images/arrow-green-tablet.svg").arrow-green
       img(src='./assets/images/health/footer.jpg' alt='footer-nav').img
 
 block footer

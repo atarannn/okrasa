@@ -144,7 +144,9 @@ block content
         span Перейти
         +svg('arrow')
     .block-style-nav-right
-      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      picture
+        source(srcset="./assets/images/arrow-green.svg" media="(min-width: 1024px)")
+        img(src="./assets/images/arrow-green-tablet.svg").arrow-green
       img(src='./assets/images/service/footer.jpg' alt='footer-nav').img
 
 

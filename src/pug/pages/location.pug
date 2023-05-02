@@ -285,7 +285,13 @@ block content
       .dark-title Серце великого міста
       +svg('patern2').patern
       .dark-text Центральна площа та вулиця Шевченка - особлива гордість Ірпеня. Це приклад того, яким повинно бути сучасне місто. Архітектурні композиції та фонтани, скульптури та зони відпочинку задають тон подальшому розвитку міста.
-    .block-style-column__info-wrapper
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--mobile
+      input(type="range", name="aaaa")
+      include ../includes/block-style-column-mobile-image-scroller-svg.pug
+      .mobile-text.light-uppercase-text Прогуляйтесь кварталом
+      div.block-style-column__mobile-scroller
+        img(src='./assets/images/location/2.jpg' alt='img')
+    .block-style-column__info-wrapper.block-style-column__info-wrapper--desktop
       .mobile-text.light-uppercase-text Прогуляйтесь кварталом
       img(src='./assets/images/location/2.jpg' alt='img')
   section.location-section-7.block-style-column-4.block-offset-top
@@ -322,7 +328,9 @@ block content
         span Перейти
         +svg('arrow')
     .block-style-nav-right
-      img(src='./assets/images/arrow-green.svg' alt='arrow').arrow-green
+      picture
+        source(srcset="./assets/images/arrow-green.svg" media="(min-width: 1024px)")
+        img(src="./assets/images/arrow-green-tablet.svg").arrow-green
       img(src='./assets/images/location/footer.jpg' alt='footer-nav').img
 block footer
   include ../includes/footer.pug
