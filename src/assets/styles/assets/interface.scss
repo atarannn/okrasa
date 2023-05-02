@@ -1135,6 +1135,10 @@
       bottom: 0;
       transform: translateX(-50%);
 
+      @include to(680px) {
+        gap: 8px;
+      }
+
       svg {
         transform: rotate(-90deg);
         fill: $wc;

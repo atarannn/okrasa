@@ -1,0 +1,25 @@
+.mobile {
+  .construction_progress-list .construction_progress-card {
+    flex-direction: column-reverse;
+
+    .left, .right {
+      width: 100%;
+    }
+
+    .right {
+      height: 180px;
+    }
+
+    .left {
+      height: auto;
+
+      .bottom {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .construction_progress-popup-wrapper .construction_progress-popup .swiper .swiper-button {
+    width: 100%;
+  }
+}
