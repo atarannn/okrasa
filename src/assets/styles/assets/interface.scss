@@ -132,6 +132,10 @@
   text-align: center;
   color: $green;
   font-size: var(--font-20);
+
+  @include to(680px) {
+    font-size: 14px;
+  }
 }
 
 .subtitle-main {
