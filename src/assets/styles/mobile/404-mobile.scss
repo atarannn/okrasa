@@ -1,0 +1,19 @@
+.mobile {
+  .page-404.block-style-center .block-style-center-bg-info-wrapper {
+    height: 50%;
+    top: 55%;
+  }
+
+  .row-404 {
+    img {
+      height: 64px;
+    }
+  }
+
+  .row-404-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
