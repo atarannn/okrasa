@@ -127,6 +127,10 @@
     gap: 8px;
     min-width: 261px;
   }
+
+  @include to(1024px) {
+    min-width: 100%;
+  }
 }
 
 
@@ -136,6 +140,10 @@
   text-align: center;
   color: $green;
   font-size: var(--font-20);
+
+  @include to(680px) {
+    font-size: 14px;
+  }
 }
 
 .subtitle-main {
@@ -1135,6 +1143,10 @@
       bottom: 0;
       transform: translateX(-50%);
 
+      @include to(680px) {
+        gap: 8px;
+      }
+
       svg {
         transform: rotate(-90deg);
         fill: $wc;
@@ -1206,6 +1218,10 @@
     height: 280px;
   }
 
+  @include to(680px) {
+    height: 200px;
+  }
+
   .patern-main-1 {
     position: absolute;
     left: 0;
@@ -1225,6 +1241,10 @@
       top: -25%;
       left: -5%;
     }
+
+    @include to(680px) {
+      top: -36%;
+    }
   }
 
   .patern-main-2 {
@@ -1242,6 +1262,10 @@
 
     @include to(1024px) {
       width: 125px;
+    }
+
+    @include to(680px) {
+      bottom: -35%;
     }
   }
 
@@ -1264,6 +1288,10 @@
     @include to(1024px) {
       width: 50%;
     }
+
+    @include to(680px) {
+      width: 60%;
+    }
   }
 
   &-right {
@@ -1273,6 +1301,10 @@
 
     @include to(1024px) {
       width: 50%;
+    }
+
+    @include to(680px) {
+      width: 40%;
     }
 
     .arrow-green {
