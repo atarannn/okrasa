@@ -821,6 +821,10 @@
       opacity: 0;
       transition: all .3s ease-in-out;
 
+      @include to(1440px) {
+        height: calc(100% - var(--btn-h));
+      }
+
       &.toggle {
         visibility: visible;
         opacity: 1;
