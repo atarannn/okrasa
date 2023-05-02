@@ -53,7 +53,7 @@
                 pointer-events: all;
             }
             img {
-                height: calc(100vh - var(--header-h));
+                height: 100%;
                 width: calc((calc(100vh - var(--header-h))) / 9 * 16);
                 max-width: none;
             }

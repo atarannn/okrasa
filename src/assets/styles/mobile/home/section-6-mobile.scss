@@ -1,7 +1,7 @@
 .mobile {
     .section-6 {
         &-slider {
-            .swiper-navigation-wrapper.swiper-pagination {
+          .swiper-navigation-wrapper.swiper-pagination {
                 display: grid;
                 column-gap: 6px;
                 row-gap: 4px;
@@ -32,6 +32,14 @@
                     }
                 }
             }
+
+          .swiper-wrapper {
+            height: calc(83vh - var(--header-h));
+          }
         }
+
+      .section-6-slider .swiper-wrapper .swiper-slide-info-wrapper .swiper-slide-info {
+        width: 150%;
+      }
     }
 }

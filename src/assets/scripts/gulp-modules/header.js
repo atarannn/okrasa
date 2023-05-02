@@ -31,29 +31,29 @@ window.onload = function () {
 };
 
 document.onscroll = function () {
-  scrollFunction();
   chooseApartment();
+  if (!isMobile) scrollFunction();
 };
 
 function scrollFunction() {
   const header = document.querySelector('header');
 
-  // if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-  //   header.classList.remove('open');
-  //   header.classList.add('close');
-  // }
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    header.classList.remove('open');
+    header.classList.add('close');
+  }
 
-  // if (header.classList.contains('close')) {
-  //   header.addEventListener('mouseover', () => {
-  //     header.classList.add('open');
-  //     header.classList.remove('close');
-  //   });
+  if (header.classList.contains('close')) {
+    header.addEventListener('mouseover', () => {
+      header.classList.add('open');
+      header.classList.remove('close');
+    });
 
-  //   header.addEventListener('mouseout', () => {
-  //     header.classList.remove('open');
-  //     header.classList.add('close');
-  //   });
-  // }
+    header.addEventListener('mouseout', () => {
+      header.classList.remove('open');
+      header.classList.add('close');
+    });
+  }
 }
 
 function chooseApartment() {

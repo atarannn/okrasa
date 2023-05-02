@@ -1,0 +1,31 @@
+.mobile {
+  .block-style-column-3__map-1__info {
+    display: none;
+  }
+
+  .section-2-mobile-slider {
+    padding: 0 var(--offset-20);
+    overflow: visible;
+
+    .swiper-pagination-mobile {
+
+    }
+
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 16px;
+    height: 3px;
+    border-radius: 19px;
+    background: $green;
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background: $bc;
+    }
+  }
+
+  .block-style-column-3__map-1 .block-wrapper {
+    width: fit-content;
+  }
+}

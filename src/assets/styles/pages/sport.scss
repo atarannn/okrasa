@@ -37,122 +37,10 @@
       grid-template-columns: repeat(2, 1fr);
       padding: 0 var(--block-offset-right) 0  var(--block-offset-left);
     }
+  }
 
-    .sport-section-6-card {
-      --sport-card-h: 500px;
-
-      @include to(1440px) {
-        --sport-card-h: 370px;
-      }
-
-      height: var(--sport-card-h);
-      width: 100%;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      overflow: hidden;
-
-      cursor: pointer;
-
-      &:hover {
-        .sport-section-6-card-img {
-          transition: height .5s linear;
-          height: calc(var(--sport-card-h) - 220px);
-
-          @include to(1440px) {
-            height: calc(var(--sport-card-h) - 160px);
-          }
-        }
-
-        .sport-section-6-card-text {
-          transition: height .5s linear;
-          height: 220px;
-
-          @include to(1440px) {
-            height: 160px;
-          }
-
-          .dark-text {
-            opacity: 1;
-            visibility: visible;
-            transition: all .5s ease-in-out;
-            transition-delay: 0.2s;
-          }
-
-          svg {
-            opacity: 1;
-            visibility: visible;
-            transition: all .5s ease-in-out;
-            transition-delay: 0.2s;
-          }
-        }
-      }
-
-      &-title {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-        top: 29px;
-        font-size: var(--font-32);
-        text-align: center;
-        width: 100%;
-
-        @include to(1440px) {
-          top: 20px;
-        }
-
-        &.white {
-          color: $wc;
-        }
-      }
-
-      &-img {
-        height: 500px;
-        width: 100%;
-        transition: height .5s linear;
-
-        img {
-          object-fit: cover;
-          height: 100%;
-        }
-      }
-
-      &-text {
-        height: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: $wc;
-        gap: var(--offset-20);
-        transition: height .5s linear;
-
-        svg {
-          width: 26px;
-          height: 37px;
-          opacity: 0;
-          visibility: hidden;
-          transition: all .5s ease-in-out;
-
-          @include to(1440px) {
-            height: 26px;
-          }
-        }
-
-        .dark-text {
-          text-align: center;
-          width: 90%;
-          opacity: 0;
-          visibility: hidden;
-          transition: all .5s ease-in-out;
-        }
-      }
-    }
+  .block-style-column-4__info-wrapper-mobile {
+    display: none;
   }
 
   .patern-main {
@@ -170,3 +58,122 @@
     }
   }
 }
+
+.sport-section-6-card {
+  --sport-card-h: 500px;
+
+  @include to(1440px) {
+    --sport-card-h: 370px;
+  }
+
+  height: var(--sport-card-h);
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+
+  &:hover {
+    .sport-section-6-card-img {
+      transition: height .5s linear;
+      height: calc(var(--sport-card-h) - 220px);
+
+      @include to(1440px) {
+        height: calc(var(--sport-card-h) - 160px);
+      }
+    }
+
+    .sport-section-6-card-text {
+      transition: height .5s linear;
+      height: 220px;
+
+      @include to(1440px) {
+        height: 160px;
+      }
+
+      .dark-text {
+        opacity: 1;
+        visibility: visible;
+        transition: all .5s ease-in-out;
+        transition-delay: 0.2s;
+      }
+
+      svg {
+        opacity: 1;
+        visibility: visible;
+        transition: all .5s ease-in-out;
+        transition-delay: 0.2s;
+      }
+    }
+  }
+
+  &-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    top: 29px;
+    font-size: var(--font-32);
+    text-align: center;
+    width: 100%;
+
+    @include to(1440px) {
+      top: 20px;
+    }
+
+    &.white {
+      color: $wc;
+    }
+  }
+
+  &-img {
+    height: 500px;
+    width: 100%;
+    transition: height .5s linear;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &-text {
+    height: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $wc;
+    gap: var(--offset-20);
+    transition: height .5s linear;
+
+    svg {
+      width: 26px;
+      height: 37px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .5s ease-in-out;
+
+      @include to(1440px) {
+        height: 26px;
+      }
+    }
+
+    .dark-text {
+      text-align: center;
+      width: 90%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .5s ease-in-out;
+    }
+  }
+}
+
+
+@import '../mobile/sport-mobile';
