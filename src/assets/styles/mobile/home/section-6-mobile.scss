@@ -2,7 +2,7 @@
     .section-6 {
         &-slider {
             .swiper-wrapper .swiper-slide-info-wrapper .swiper-slide-info {
-                width: 125%;
+                width: 150%;
             }
             .swiper-navigation-wrapper.swiper-pagination {
                 display: grid;
@@ -23,6 +23,9 @@
                     padding-bottom: 0;
                     color: $bc;
                     font-weight: 700;
+                    height: 36px;
+                    width: 100%;
+                    background-color: transparent;
                     &.swiper-pagination-bullet-active {
                         background-color: $green;
                         color: $wc;

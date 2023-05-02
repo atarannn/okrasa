@@ -4,6 +4,12 @@
       height: 724px;
     }
   }
+
+  @include to(680px) {
+    .section-6 .section-6-slider .swiper-wrapper {
+      height: 524px;
+    }
+  }
 }
 
 .section-1, .section-3, .section-4, .section-7, .section-9, .section-10 {
