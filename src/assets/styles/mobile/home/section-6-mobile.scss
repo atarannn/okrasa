@@ -1,6 +1,9 @@
 .mobile {
     .section-6 {
         &-slider {
+            .swiper-wrapper .swiper-slide-info-wrapper .swiper-slide-info {
+                width: 125%;
+            }
             .swiper-navigation-wrapper.swiper-pagination {
                 display: grid;
                 column-gap: 6px;
@@ -19,6 +22,7 @@
                     line-height: 38px;
                     padding-bottom: 0;
                     color: $bc;
+                    font-weight: 700;
                     &.swiper-pagination-bullet-active {
                         background-color: $green;
                         color: $wc;
