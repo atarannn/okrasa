@@ -44,12 +44,23 @@ function formCloseAnim(evt, reverseArg) {
 
 function formInit() {
   const form = document.querySelectorAll('[data-form-wrapper]');
-  document.querySelectorAll('[data-call-form]').forEach(elem => {
-    elem.addEventListener('click', () => formOpen(form));
+
+  document.body.addEventListener('click',function openCallbackForm(evt){
+    const target = evt.target.closest('[data-call-form]');
+    if (!target) return;
+    formOpen(form);
   });
-  document.querySelectorAll('[data-close-form]').forEach(elem => {
-    elem.addEventListener('click', () => formClose(form));
+  document.body.addEventListener('click',function closeCallbackForm(evt){
+    const target = evt.target.closest('[data-close-form]');
+    if (!target) return;
+    formClose(form);
   });
+  // document.querySelectorAll('[data-call-form]').forEach(elem => {
+  //   elem.addEventListener('click', () => formOpen(form));
+  // });
+  // document.querySelectorAll('[data-close-form]').forEach(elem => {
+  //   elem.addEventListener('click', () => formClose(form));
+  // });
 }
 
 
