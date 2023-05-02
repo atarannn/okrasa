@@ -5,6 +5,8 @@ import * as yup from 'yup';
 import FormMonster from '../../pug/components/form/form';
 import SexyInput from '../../pug/components/input/input';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import "current-device";
+
 
 global.gsap = gsap;
 global.ScrollTrigger = ScrollTrigger;

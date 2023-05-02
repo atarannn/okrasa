@@ -1,4 +1,4 @@
-const isMobile = window.matchMedia('(max-width: 600px)').matches;
+const isMobile = window.matchMedia('(max-width: 1024px)').matches;
 
 window.onload = function () {
   const header = document.querySelector('header');

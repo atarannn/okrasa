@@ -1,11 +1,13 @@
 @include to(600px){
     .form-wrapper {
+        z-index: 102;
         .form {
             width: 100%;
             --offset-100: 32px;
             align-content: flex-start;
             justify-content: flex-start;
-            padding-block: var(--offset-100);
+            padding: var(--offset-100);
+            padding-top: calc(var(--header-h) + 20px);
         }
     }
 }

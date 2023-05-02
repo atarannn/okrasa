@@ -1,0 +1,43 @@
+
+.block-style-column__info-wrapper--mobile {
+    display: none;
+}
+.mobile,
+.tablet {
+    .block-style-column {
+        &__mobile-slider {
+            position: absolute;
+            bottom: calc(var(--offset-50) + 20px);
+            width: calc(100% - 20px);
+            left: 10px;
+            height: auto;
+            z-index: 4;
+
+        }
+        &__mobile-scroller {
+            height: calc(100vh - var(--header-h));
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            img {
+                height: calc(100vh - var(--header-h));
+                width: calc((calc(100vh - var(--header-h))) / 9 * 16);
+                max-width: none;
+            }
+        }
+        &__info-wrapper {
+            overflow-y: hidden;
+            overflow-x: auto;
+            &--mobile {
+                display: block;
+            }
+            &--desktop {
+                display: none;
+            }
+            
+        }
+    }
+}
+
+
+
