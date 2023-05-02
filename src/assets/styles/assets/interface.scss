@@ -80,8 +80,8 @@
     min-width: 261px;
   }
 
-  @include to(680px) {
-    min-width: 200px;
+  @at-root .mobile & {
+    min-width: 206px;
   }
 
   span {
@@ -270,10 +270,6 @@
       @include to(1024px) {
         text-align: center;
       }
-
-      @include to(1024px) {
-        max-width: 98%;
-      }
     }
 
     .dark-text-wrapper {
@@ -320,10 +316,6 @@
     @include to(1024px) {
       width: 100%;
       height: 475px;
-    }
-
-    @include to(680px) {
-      height: 222px;
     }
 
     img {
@@ -636,24 +628,6 @@
       }
     }
 
-    &.height-130vh {
-      @include to(1024px) {
-        height: 130vh;
-
-        &:before {
-          content: "";
-          background: linear-gradient(180deg, rgba(31, 32, 38, 0.5) 0%, rgba(31, 32, 38, 0) 100%);
-          transform: matrix(1, 0, 0, -1, 0, 0);
-          width: 100%;
-          height: 20%;
-          position: absolute;
-          left: 0;
-          bottom: -1px;
-          z-index: 1;
-        }
-      }
-    }
-
     &.height-140vh {
       @include to(1024px) {
         height: 140vh;
@@ -745,62 +719,6 @@
         gap: 50px;
       }
 
-      .block-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 12px;
-        width: 100%;
-
-        @include to(1024px) {
-          width: auto;
-        }
-
-        .block-text {
-          @include font($default-font2, 400, 100%);;
-          color: $bc;
-          font-size: var(--font-16);
-        }
-
-        .row {
-          display: flex;
-          align-items: flex-end;
-          justify-content: flex-start;
-          gap: 4px;
-          width: 100%;
-
-          .dark-title {
-            font-size: var(--font-48);
-
-            @include to(680px) {
-              font-size: var(--font-80);
-            }
-          }
-
-          &.animation-row {
-            gap: 12px;
-
-            .line {
-              @include to(1024px) {
-                width: 59px;
-              }
-
-              @include to(680px) {
-                width: 80px;
-              }
-            }
-          }
-
-          .green-text {
-            @include font($default-font2, 400, 100%);;
-            color: $green;
-            font-size: var(--font-16);
-            white-space: nowrap;
-          }
-        }
-      }
-
       &.toggle {
         visibility: hidden;
         opacity: 0;
@@ -832,6 +750,54 @@
           width: 100%;
           gap: var(--offset-20);
           padding: 0 var(--block-offset-left) 0  var(--block-offset-right);
+        }
+
+        .block-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 12px;
+          width: 100%;
+
+          @include to(1024px) {
+            width: auto;
+          }
+
+          .block-text {
+            @include font($default-font2, 400, 100%);;
+            color: $bc;
+            font-size: var(--font-16);
+          }
+
+          .row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            gap: 4px;
+            width: 100%;
+
+            .dark-title {
+              font-size: var(--font-48);
+            }
+
+            &.animation-row {
+              gap: 12px;
+
+              .line {
+                @include to(1024px) {
+                  width: 59px;
+                }
+              }
+            }
+
+            .green-text {
+              @include font($default-font2, 400, 100%);;
+              color: $green;
+              font-size: var(--font-16);
+              white-space: nowrap;
+            }
+          }
         }
       }
 
