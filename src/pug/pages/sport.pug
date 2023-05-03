@@ -29,6 +29,7 @@ block scripts
   script(defer src='./assets/scripts/arrow-down.js')
   script(defer src='./assets/scripts/social-btn.js')
   script(defer src='./assets/scripts/sport-mobile-slider.js')
+  script(defer src='./assets/scripts/sport-mobile-slider-2.js')
 
 
 block content
@@ -75,18 +76,46 @@ block content
             .light-title-main 4
           .block-style-col-bottom
             .light-text-main Спортивних поля
+      .swiper-container.section-2-mobile-slider
+        .swiper-wrapper
+          .swiper-slide
+            .block-style-col
+              .block-style-col-top
+                .light-title-main 10
+                .light-text-main км
+              .block-style-col-bottom
+                .light-text-main Бігових та вело-доріжок
+            .block-style-col
+              .block-style-col-top
+                .light-title-main 860
+                .light-text-main м²
+              .block-style-col-bottom
+                .light-text-main Площа спортивних майданчиків
+          .swiper-slide
+            .block-style-col
+              .block-style-col-top
+                .light-title-main 25
+                .light-text-main м
+              .block-style-col-bottom
+                .light-text-main Довжина кожної доріжки басейну
+            .block-style-col
+              .block-style-col-top
+                .light-title-main 4
+              .block-style-col-bottom
+                .light-text-main Спортивних поля
+        .swiper-navigation-wrapper.swiper-pagination-mobile
       .block-style-column-2__text-wrapper
         .green-subtitle Живи там, де
         .dark-title Спорт для всіх
         +svg('patern2').patern
         .dark-text Найкращий у світі спортзал той, що відкритий будь-якої пори року. В місті передбачено кілька workout зон для різного віку, спортивні поля для активних ігор та мережа бігових і вело-доріжок. Хто ж відмовиться від персонального спортзалу на свіжому повітрі?
-    .block-style-column-2__info-wrapper.block-style-column__info-wrapper.block-style-column__info-wrapper--mobile
+    .block-style-column-2__info-wrapper.block-style-column__info-wrapper.block-style-column__info-wrapper--mobile.height-140vh
       input(type="range", name="aaaa")
       include ../includes/block-style-column-mobile-image-scroller-svg.pug
       .mobile-text.light-uppercase-text Прогуляйтесь кварталом
       div.block-style-column__mobile-scroller
         img(src='./assets/images/sport/2.jpg' alt='img')
-    .block-style-column-2__info-wrapper.block-style-column__info-wrapper.block-style-column__info-wrapper--desktop
+    .block-style-column-2__info-wrapper.block-style-column__info-wrapper.block-style-column__info-wrapper--desktop.height-140vh
       .mobile-text.light-uppercase-text Прогуляйтесь кварталом
       img(src='./assets/images/sport/2.jpg' alt='img')
   section.block-style-row.block-style-row-2.block-offset-top
