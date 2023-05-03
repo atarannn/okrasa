@@ -7,6 +7,19 @@
     display: block;
     padding: 0 var(--offset-20);
     overflow: visible;
+    width: 100%;
+
+    // .swiper-slide {
+    //   flex-shrink: 1;
+
+    // }
+
+    .swiper-navigation-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+    }
 
     .swiper-pagination-mobile {
 

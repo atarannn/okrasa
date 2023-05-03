@@ -230,6 +230,10 @@
       gap: var(--offset-50);
     }
 
+    @include to(680px) {
+      gap: 32px;
+    }
+
     .block-offset-left-2 {
       padding-left: var(--offset-100);
 
@@ -264,11 +268,20 @@
       padding: 0;
     }
 
+    @include to(680px) {
+      width: 100%;
+      padding: 0 20px;
+    }
+
     .dark-title {
       max-width: 90%;
 
       @include to(1024px) {
         text-align: center;
+      }
+
+      @include to(680px) {
+        max-width: 100%;
       }
     }
 
@@ -282,6 +295,11 @@
 
       @include to(1024px) {
         align-items: center;
+      }
+
+      @include to(680px) {
+        margin-bottom: 0;
+        margin-top: 20px;
       }
 
       .desktop {
@@ -549,6 +567,10 @@
 
     z-index: 2;
 
+    @include to(680px) {
+      padding: 0 20px;
+    }
+
     .dark-title {
       text-align: center;
       max-width: var(--title-width);
@@ -566,6 +588,10 @@
     .dark-text {
       text-align: center;
       max-width: var(--text-width);
+
+      @include to(680px) {
+        max-width: 100%;
+      }
     }
 
     .patern {
@@ -755,6 +781,10 @@
           gap: 4px;
           width: 100%;
 
+          @include to(680px) {
+            width: fit-content;
+          }
+
           .dark-title {
             font-size: var(--font-48);
 
@@ -766,9 +796,17 @@
           &.animation-row {
             gap: 12px;
 
+            @include to(660px) {
+              width: 100%;
+            }
+
             .line {
               @include to(1024px) {
                 width: 59px;
+              }
+
+              @include to(660px) {
+                width: 99px;
               }
             }
           }
@@ -1192,14 +1230,28 @@
   padding: var(--block-offset-top) 0;
   gap: var(--offset-20);
 
+  @include to(680px) {
+    gap: 0;
+    padding: var(--block-offset-top) 20px;
+  }
+
   .patern-1 {
     height: 37px;
     width: 26px;
+
+    @include to(680px) {
+      margin-bottom: 20px;
+    }
+  
   }
 
   .patern-2 {
     height: 2px;
     width: 40px;
+
+    @include to(680px) {
+      margin-top: 32px;
+    }
   }
 
   .dark-text {
@@ -1208,6 +1260,10 @@
 
     @include to(1024px) {
       max-width: 80%;
+    }
+
+    @include to(680px) {
+      max-width: 100%;
     }
   }
 }
