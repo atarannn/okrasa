@@ -180,6 +180,10 @@
               align-items: center;
             }
 
+            @include to(680px) {
+              width: 50%;
+            }
+
             .swiper-slide-info-green-title {
               @include font($default-font2 ,400, 100%);
               color: $green;
@@ -266,6 +270,10 @@
         bottom: 52%;
       }
 
+      @include to(680px) {
+        bottom: 40%;
+      }
+
       .slider__prev, .slider__next {
         &.swiper-button-disabled {
           cursor: no-drop;
@@ -302,6 +310,11 @@
 
     @include to(1440px) {
       width: 168px;
+    }
+
+    @include to(680px) {
+      width: 78px;
+      top: 50%;
     }
   }
 

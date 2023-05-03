@@ -367,6 +367,10 @@
     justify-content: flex-start;
     width: 100%;
 
+    @include to(680px) {
+      padding: 0 20px;
+    }
+
     .dark-title {
       text-align: center;
       max-width: var(--title-width);
@@ -375,6 +379,10 @@
     .dark-text {
       text-align: center;
       max-width: var(--text-width);
+
+      @include to(680px) {
+        max-width: 100%;
+      }
     }
 
     .patern {
@@ -420,6 +428,10 @@
         transform: translateX(-50%);
         bottom: var(--offset-50);
         z-index: 1;
+      }
+
+      @include to(680px) {
+        bottom: 28px;
       }
     }
 
