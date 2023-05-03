@@ -21,6 +21,10 @@
       width: 145px;
       top: 50%;
     }
+
+    @include to(680px) {
+      display: none;
+    }
   }
 
   .block-style-column-2__info-wrapper {
