@@ -115,6 +115,10 @@ contacts.forEach((contacts) => {
 
 document.querySelectorAll('.block-style-column__mobile-slider').forEach(handleMobileBlockImageHorizontalScroll);
 
+window.addEventListener('DOMContentReloaded', () => {
+  document.querySelectorAll('.block-style-column__mobile-slider').forEach(handleMobileBlockImageHorizontalScroll);
+
+})
 
 function handleMobileBlockImageHorizontalScroll(el) {
   const parent = el.closest('section');
