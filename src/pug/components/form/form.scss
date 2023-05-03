@@ -51,7 +51,7 @@
   top: var(--offset-40);
   right: var(--offset-40);
   cursor: pointer;
-  z-index: 102;
+  z-index: 1000;
 
   svg {
     stroke: $green;

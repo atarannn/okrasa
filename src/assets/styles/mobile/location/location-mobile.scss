@@ -1,0 +1,95 @@
+.mobile {
+    [id*='location'] .section-1 {
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+    }
+    .location-section-2 {
+        .dark-text {
+            padding-inline: var(--block-offset-left);
+        }
+    }
+
+    .location-section-3 {
+        .swiper-navigation-wrapper {
+            text-align: center;
+            margin-top: 50px;
+        }
+        &>.block-wrapper {
+            display: none;
+        }
+        .block-wrapper {
+            width: auto;
+            height: auto;
+            .dark-title {
+                font-size: 36px;
+            }
+            .row {
+                .block-text {
+
+                }
+            }
+            &>.block-text {
+                margin-bottom: 14px;
+            }
+        }
+    }
+    .location-section-7 {
+        .gallery-wrapper {
+            display: block;
+            padding-inline: 0;
+            .swiper-slide:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: linear-gradient(180deg, rgba(31, 32, 38, 0.5) 0%, rgba(31, 32, 38, 0) 100%);
+                transform: rotate(180deg);
+                width: 100vw;
+                height: calc(100vw * 0.3);
+
+            }
+            img {
+                height: calc(100vw / 16 * 10);
+            }
+            .swiper-pagination-bullets {
+                margin-top: -20px;
+                position: relative;
+                z-index: 10;
+                text-align: center;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: $wc !important;
+            }
+        }
+    }
+    .location-section-5 {
+        .swiper-slide {
+            height: calc(var(--vh, 1vh) * 75);
+            justify-content: space-between;
+        }
+        .swiper-slide {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: calc(100vw / 16 * 10 + 30px);
+                transform: translateY(100%);
+                background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 39.15%, rgba(255, 255, 255, 0) 100%);
+                width: 100%;
+                height: calc(100vw * 0.33);
+                pointer-events: none;
+            }
+            img {
+                width: 100vw;
+                height: calc(100vw / 16 * 10 + 20px);
+                object-fit: cover;
+            }
+        }
+        .swiper-wrapper__arrows {
+            position: absolute;
+            bottom: calc(100vw / 16 * 10);
+            transform: translateX(-50%) translateY(100%);
+        }
+    }
+}

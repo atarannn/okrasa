@@ -77,7 +77,9 @@
         &__map {
             // padding-bottom: 100vh;
         }
-
+        .map-wrapper {
+            height: 100%;
+        }
         &__map-1 {
             align-content: flex-start;
             &__info {

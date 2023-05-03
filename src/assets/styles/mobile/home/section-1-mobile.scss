@@ -5,10 +5,14 @@
       }
       --home-swiper-1-top-offset: calc(var(--header-h) +  20px);
       .swiper-pagination {
-          display: none;
+        display: none;
       }
-      .swiper-wrapper .swiper-slide-info-wrapper{
+      .swiper-wrapper {
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        .swiper-slide-info-wrapper{
           max-width: 70%;
+        }
       }
       .section-1-slider .swiper-wrapper .swiper-wrapper__arrows .swiper__devider {
         width: var(--btn-h);
