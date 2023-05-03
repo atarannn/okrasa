@@ -1,3 +1,8 @@
+.location-section-3 {
+    .swiper-container {
+        display: none;
+    }
+}
 .mobile {
     [id*='location'] .section-1 {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
@@ -34,6 +39,7 @@
         }
     }
     .location-section-7 {
+        --offset-50: 30px;
         .gallery-wrapper {
             display: block;
             padding-inline: 0;

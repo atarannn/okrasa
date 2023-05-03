@@ -20,6 +20,8 @@ const slider2 = new Swiper('.section-6-slider', {
   preloadImages: false,
   lazy: true,
   speed: 1000,
+  simulateTouch: false,
+  allowTouchMove: false,
   // autoplay: {
   //   delay: 5000,
   //   disableOnInteraction: true,
@@ -34,3 +36,62 @@ const slider2 = new Swiper('.section-6-slider', {
     },
   },
 });
+
+
+
+
+window.addEventListener('DOMContentLoaded',function(evt){
+  mobileTabsScroller(document.querySelector('.section-6 .swiper-navigation-wrapper'));
+    
+});
+
+function mobileTabsScroller($container) {
+  if (!document.documentElement.classList.contains('mobile')) return;
+
+  const section6Navigation = $container;
+  // const section6Navigation = document.querySelector('.section-6 .swiper-navigation-wrapper');
+  section6Navigation.insertAdjacentHTML('afterend', `
+    <div class="section-6-mobile-navigation-scroller">
+      <svg data-section-6-mobile-scroll-prev width="29" height="46" viewBox="0 0 29 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="29" y="46" width="29" height="46" transform="rotate(-180 29 46)" fill="#71A700"/>
+        <path d="M17 28L12 23L17 18" stroke="white" stroke-width="2"/>
+      </svg>
+      <svg data-section-6-mobile-scroll-next width="29" height="46" viewBox="0 0 29 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="29" height="46" fill="#71A700"/>
+        <path d="M12 18L17 23L12 28" stroke="white" stroke-width="2"/>
+      </svg>
+    </div>
+  `);
+
+  document.body.addEventListener('click',function(evt){
+    const target = evt.target.closest('[data-section-6-mobile-scroll-next]');
+    if (!target) return;
+    gsap.to(section6Navigation, {
+      scrollLeft: section6Navigation.scrollLeft + 150,
+      ease: 'power4.out'
+    });
+  });
+  document.body.addEventListener('click',function(evt){
+    const target = evt.target.closest('[data-section-6-mobile-scroll-prev]');
+    if (!target) return;
+    gsap.to(section6Navigation, {
+      scrollLeft: section6Navigation.scrollLeft - 150,
+      ease: 'power4.out'
+    });
+  });
+  section6Navigation.addEventListener('scroll',function({ target }){
+    checkLeftScrollEdge(target.scrollLeft, target.scrollLeft);
+    checkRightScrollEdge(target.scrollLeft, target.scrollWidth);
+  });
+
+  function checkLeftScrollEdge(scrollValue, scrollWidth) {
+    document.querySelectorAll('[data-section-6-mobile-scroll-prev]').forEach(el => {
+      el.style.opacity = scrollValue === 0 ? 0 : 1;
+    }) 
+  }
+  function checkRightScrollEdge(scrollValue, scrollWidth) {
+    document.querySelectorAll('[data-section-6-mobile-scroll-next]').forEach(el => {
+      el.style.opacity = (scrollValue === (scrollWidth - window.innerWidth)) ? 0 : 1;
+    }) 
+  }
+}
