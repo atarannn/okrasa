@@ -12,7 +12,7 @@
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  background-color: rgba(10, 17, 27, 1);
+  background-color: $wc;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -25,12 +25,12 @@
 .preloader__image {
   animation: pulse 2s linear infinite;
   height: auto;
-  width: 150px;
+  width: 350px;
 }
 
 @media screen and (max-width: 680px) {
   .preloader__image {
-    width: 70px;
+    width: 150px;
   }
 }
 

@@ -75,4 +75,8 @@
   .section-6 .section-6-slider.section-6-slider-3 .swiper-wrapper {
     padding-bottom: 0;
   }
+
+  .section-6 .section-6-slider.section-6-slider-3 .swiper-wrapper .swiper-slide {
+    gap: var(--offset-20);
+  }
 }
