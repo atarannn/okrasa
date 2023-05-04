@@ -60,22 +60,28 @@ function init() {
   popupInit();
 }
 
-window.addEventListener('DOMContentLoaded', init);
+// window.addEventListener('DOMContentLoaded', );
 
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true,
-  },
-  navigation: {
-    nextEl: document.querySelector('[data-swiper-next]'),
-    prevEl: document.querySelector('[data-swiper-prev]'),
-  },
-  pagination: {
-    type: 'fraction',
-  },
-  lazy: true,
-  speed: 400,
-  watchSlidesVisibility: true,
-});
+init();
+
+function initConstructionSwiper() {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    navigation: {
+      nextEl: document.querySelector('[data-swiper-next]'),
+      prevEl: document.querySelector('[data-swiper-prev]'),
+    },
+    pagination: {
+      type: 'fraction',
+    },
+    lazy: true,
+    speed: 400,
+    watchSlidesVisibility: true,
+  });
+}
+
+initConstructionSwiper();
