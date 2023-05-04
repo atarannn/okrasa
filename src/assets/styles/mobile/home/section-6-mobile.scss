@@ -1,4 +1,4 @@
-.mobile {
+.mobile  {
     .section-6 {
         &-slider {
             .swiper-wrapper .swiper-slide-info-wrapper .swiper-slide-info {
@@ -30,6 +30,7 @@
                     &.swiper-pagination-bullet-active {
                         background-color: $green;
                         color: $wc;
+                      border: none;
                     }
                     &:before,
                     &:after {

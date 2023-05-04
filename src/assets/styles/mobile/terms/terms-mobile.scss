@@ -3,6 +3,10 @@
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
         height: calc(var(--vh, 1vh) * 100);
     }
+
+  [id*="terms"] .section-6 .section-6-slider .swiper-wrapper .swiper-slide{
+    height: auto;
+  }
     .section-terms {
         .section-6-slider {
             flex-direction: column;
@@ -18,7 +22,7 @@
     }
     .section-6 .section-6-slider {
         height: auto;
-        
+
         .section-6-mobile-navigation-scroller {
             position: absolute;
             left:calc(var(--block-offset-left) * -1);
@@ -29,7 +33,7 @@
             display: flex;
             justify-content: space-between;
             pointer-events: none;
-            
+
             &>* {
                 pointer-events: all;
                 transition: .25s ease-out;
@@ -54,7 +58,7 @@
             padding-top: 0;
             margin-left: calc(30px * -1);
             margin-right: calc(30px * -1);
-            
+
             width: 100vw;
             max-width: none;
             padding-inline: 30px;
@@ -86,13 +90,14 @@
                 width: 100%;
             }
             .swiper-slide {
-                padding-left: 0;
+              padding-left: 0;
                 .slider-top {
                     flex-wrap: wrap;
                 }
                 .slider-top-right,
                 .slider-top-left {
                     width: 100%;
+                  height: auto;
                 }
                 .info-wrapper-3 {
                     display: grid;
