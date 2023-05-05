@@ -207,4 +207,7 @@ function handleMobileBlockImageHorizontalScroll(el) {
     );
     slideSvgButton.setAttribute('transform', `translate(${swipeXoffset - (slideSvgButtonRadius * 2)} ,0)`)
   });
+
+  slider.value = imageScrollContainer.scrollWidth / 2;
+  slider.dispatchEvent(new Event('input'));
 }
