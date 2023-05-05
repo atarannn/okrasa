@@ -46,7 +46,7 @@ form.forEach((form) => {
         fields: {
           name: {
             inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-name]') }),
-            rule: yup.string().required(i18next.t('required')).matches(/^[aA-zZ\s]+$/, i18next.t('onlyletters')).trim(),
+            rule: yup.string().required(i18next.t('required')).matches(/^[A-Za-zА-Яа-яЁёІіЇї\s]+$/, i18next.t('onlyletters')).trim(),
             defaultMessage: i18next.t('name'),
             valid: false,
             error: [],
@@ -87,7 +87,7 @@ revision.forEach((form) => {
         fields: {
           name: {
             inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-name]') }),
-            rule: yup.string().required(i18next.t('required')).matches(/^[aA-zZ\s]+$/, i18next.t('onlyletters')).trim(),
+            rule: yup.string().required(i18next.t('required')).matches(/^[A-Za-zА-Яа-яЁёІіЇї\s]+$/, i18next.t('onlyletters')).trim(),
             defaultMessage: i18next.t('name'),
             valid: false,
             error: [],
@@ -141,7 +141,7 @@ function initContactForm() {
           fields: {
             name: {
               inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-name]') }),
-              rule: yup.string().required(i18next.t('required')).matches(/^[aA-zZ\s]+$/, i18next.t('onlyletters')).trim(),
+              rule: yup.string().required(i18next.t('required')).matches(/^[A-Za-zА-Яа-яЁёІіЇї\s]+$/, i18next.t('onlyletters')).trim(),
               defaultMessage: i18next.t('name'),
               valid: false,
               error: [],

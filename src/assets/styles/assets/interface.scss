@@ -75,6 +75,30 @@
   border-top: 1px solid $green;
   border-bottom: 1px solid $green;
   z-index: 10;
+  visibility: hidden;
+
+  &:hover {
+    svg {
+      //transform: translateX(10px);
+      //width: 43px;
+      //transition: .3s ease-in-out;
+      animation: 1.3s linear infinite slidein;
+    }
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(10px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
 
   @include to(1440px) {
     gap: 8px;
@@ -94,9 +118,11 @@
   }
 
   svg {
+    margin-right: 10px;
     fill: $bc;
     width: 35px;
     height: 20px;
+    transition: .3s ease-in-out;
   }
 }
 
@@ -948,6 +974,7 @@
       .map-wrapper {
         position: relative;
         height: 100%;
+        pointer-events: all;
 
         .map {
           width: 100%;
@@ -974,6 +1001,7 @@
         width: auto;
         height: auto;
         overflow: hidden;
+        pointer-events: none;
 
         @include to(1024px) {
           left: 0;
@@ -989,6 +1017,7 @@
           gap: 24px;
           cursor: pointer;
           padding: 12px;
+          pointer-events: all;
 
           &.open {
             padding: 5px 12px;
@@ -1040,6 +1069,7 @@
           justify-content: center;
           gap: 16px;
           background-color: $wc;
+          pointer-events: all;
 
           .map-navigation__button  {
             display: flex;

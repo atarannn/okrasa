@@ -1189,7 +1189,7 @@
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
-            flex-wrap: wrap;
+            //flex-wrap: wrap;
             gap: var(--offset-40);
             width: 100%;
 
@@ -1198,7 +1198,7 @@
             }
 
             .info {
-              width: 100%;
+              width: 45%;
             }
           }
 
@@ -1308,7 +1308,7 @@
               justify-content: flex-start;
               gap: var(--offset-40);
               height: 100%;
-              width: 40%;
+              width: 100%;
 
               @include to(1440px) {
                 gap: var(--offset-20);
