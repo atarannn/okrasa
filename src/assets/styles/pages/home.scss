@@ -565,11 +565,16 @@
         top: calc(var(--swiper-info-h) - var(--btn-h));
         width: calc(100% - var(--swiper-padding)*2);
         transform: translateX(-50%);
+        pointer-events: none;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
         z-index: 1;
+
+        .small-btn {
+          pointer-events: all;
+        }
 
         .swiper-button-disabled {
           opacity: 0.5;

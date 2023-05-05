@@ -3,15 +3,96 @@
       .patern-main-1, .patern-main-2 {
         display: none;
       }
-      --home-swiper-1-top-offset: calc(var(--header-h) +  20px);
-      .swiper-pagination {
-        display: none;
+
+      &-slider {
+        .swiper-navigation-wrapper {
+          height: var(--header-h);
+
+          &.swiper-pagination {
+            position: absolute;
+            left: calc(var(--header-w) + var(--block-offset-left));
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            z-index: 10;
+            gap: 6px;
+
+            @include to(1440px) {
+              left: calc(var(--header-w) + 98px);
+            }
+
+            @include to(1024px) {
+              top: calc(var(--header-h) + 30px);
+              left: var(--block-offset-left);
+            }
+          }
+
+          .swiper-pagination-bullet {
+            @include font($default-font ,400, 140%);;
+            color: rgba(255, 253, 246, 0.4);
+            font-size: var(--font-12);
+            text-align: left;
+            letter-spacing: -0.03em;
+            height: auto!important;
+            width: 50px!important;
+            background: transparent!important;
+            position: relative;
+            padding-top: 10px;
+            margin: 0;
+            opacity: 1!important;
+
+            .animation-line {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 50px;
+              height: 6px;
+              border-top: 1px solid rgba(255, 253, 247, 0.4);
+              border-bottom: 1px solid rgba(255, 253, 247, 0.4);
+              z-index: -1;
+
+              line {
+                height: 6px;
+                stroke: rgba(255, 253, 247, 0);
+                z-index: 0;
+
+                &[data-white-line] {
+                  height: 6px;
+                  transform: scale(0);
+                  stroke: $wc;
+                  z-index: 1;
+                }
+              }
+            }
+          }
+          .swiper-pagination-bullet-active {
+            color: $wc;
+
+            .animation-line {
+              line {
+                &[data-white-line] {
+                  transform: scale(10);
+                }
+              }
+            }
+          }
+        }
       }
+      --home-swiper-1-top-offset: calc(var(--header-h) +  20px);
+      //.swiper-pagination {
+      //  display: none;
+      //}
       .swiper-wrapper {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
         height: calc(var(--vh, 1vh) * 100);
         .swiper-slide-info-wrapper{
           max-width: 70%;
+          top: 20%;
+        }
+
+        .swiper-wrapper__arrows {
+          top: 20%;
         }
       }
       .section-1-slider .swiper-wrapper .swiper-wrapper__arrows .swiper__devider {

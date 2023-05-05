@@ -74,6 +74,7 @@
   min-width: 296px;
   border-top: 1px solid $green;
   border-bottom: 1px solid $green;
+  z-index: 10;
 
   @include to(1440px) {
     gap: 8px;
@@ -89,6 +90,7 @@
     color: $bc;
     font-size: var(--font-16);
     text-transform: uppercase;
+    text-align: left;
   }
 
   svg {
@@ -389,7 +391,7 @@
 
     .patern {
       width: 40px;
-      height: 2px;
+      height: 1px;
       margin: var(--offset-28) 0;
     }
 
@@ -610,7 +612,7 @@
 
     .patern {
       width: 40px;
-      height: 2px;
+      height: 1px;
       margin: var(--offset-28) 0;
     }
 
@@ -769,7 +771,7 @@
 
     .patern {
       width: 40px;
-      height: 2px;
+      height: 1px;
       margin: var(--offset-28) 0;
     }
 
@@ -1141,7 +1143,7 @@
 
     .patern {
       width: 40px;
-      height: 2px;
+      height: 1px;
       margin: var(--offset-28) 0;
     }
   }
@@ -1296,7 +1298,7 @@
   }
 
   .patern-2 {
-    height: 2px;
+    height: 1px;
     width: 40px;
 
     @include to(680px) {

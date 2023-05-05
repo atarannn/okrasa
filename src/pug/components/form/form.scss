@@ -1,4 +1,4 @@
-.form-wrapper {
+.form-wrapper, .form-wrapper-2 {
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
@@ -12,7 +12,7 @@
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
-  z-index: 101;
+  z-index: 102;
 
   .form {
     height: auto;

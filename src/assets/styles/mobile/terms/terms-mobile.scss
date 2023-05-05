@@ -1,5 +1,5 @@
 .mobile {
-    [id*="terms"] .section-1 {
+    .section-1 {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
         height: calc(var(--vh, 1vh) * 100);
     }
@@ -39,6 +39,22 @@
                 transition: .25s ease-out;
             }
         }
+        @at-root .mobile body[id*="children"] .section-6 .section-6-slider .swiper-navigation-wrapper.swiper-pagination .swiper-pagination-bullet {
+          width: calc(100%/3);
+        }
+
+      @at-root .mobile body[id*="lifestyle"] .section-6 .section-6-slider .swiper-navigation-wrapper.swiper-pagination .swiper-pagination-bullet {
+        width: calc(100%/4);
+      }
+
+      @at-root .mobile body[id*="service"] .section-6 .section-6-slider .swiper-navigation-wrapper.swiper-pagination .swiper-pagination-bullet {
+        width: calc(100%/3);
+      }
+
+      @at-root .mobile body[id*="health"] .section-6 .section-6-slider .swiper-navigation-wrapper.swiper-pagination .swiper-pagination-bullet {
+        width: calc(100%/2);
+      }
+
         @at-root .mobile body[id*="style"] .section-6-mobile-navigation-scroller {
             left: 0 !important;
         }
@@ -75,7 +91,7 @@
             justify-content: flex-start;
             gap: 0;
             overflow-x: auto;
-            padding-bottom: 20px;
+            padding-bottom: 40px;
             padding-top: 0;
             margin-left: calc(30px * -1);
             margin-right: calc(30px * -1);
@@ -88,7 +104,7 @@
                 margin-right: 0;
             }
             .swiper-pagination-bullet {
-                padding-inline: 12px;
+                padding-inline: 10px;
                 border-block-color: #EBEBEB;
                 height: 48px;
                 &.swiper-pagination-bullet-active {
