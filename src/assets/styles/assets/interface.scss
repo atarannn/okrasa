@@ -973,11 +973,61 @@
         bottom: 0;
         width: auto;
         height: auto;
-        background-color: $wc;
         overflow: hidden;
 
         @include to(1024px) {
           left: 0;
+        }
+
+        &__button-mobile {
+          display: none;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          background: $wc;
+          border: none;
+          gap: 24px;
+          cursor: pointer;
+          padding: 12px;
+
+          &.open {
+            padding: 5px 12px;
+            margin-bottom: -8px;
+
+            span {
+              visibility: hidden;
+              opacity: 0;
+              transition: .2s ease-in-out;
+            }
+
+            svg {
+              transform: rotate(-90deg);
+              transition: .2s ease-in-out;
+            }
+          }
+
+          @include to(680px) {
+            display: flex;
+          }
+
+          & svg {
+            max-width: 16px;
+            height: 16px;
+            fill: $green;
+            transform: rotate(90deg);
+            transition: .2s ease-in-out;
+          }
+
+          & span {
+            position: relative;
+            @include font;
+            font-size: var(--font12);
+            color: $bc;
+            white-space: nowrap;
+            visibility: visible;
+            opacity: 1;
+            transition: .2s ease-in-out;
+          }
         }
 
         &__main {
@@ -989,8 +1039,9 @@
           align-items: flex-start;
           justify-content: center;
           gap: 16px;
+          background-color: $wc;
 
-          .map-navigation__button {
+          .map-navigation__button  {
             display: flex;
             align-items: center;
             justify-content: flex-start;

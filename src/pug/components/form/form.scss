@@ -175,7 +175,7 @@ textarea.form-field__input {
 }
 [data-animation="none"] .input-message {
   @include font($default-font2, 400, 100%);
-  font-size: var(--font-16);
+  font-size: 10px;
   color: $grey;
   text-align: left;
   position: absolute;
