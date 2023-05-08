@@ -41,9 +41,18 @@
       color: $bc;
       font-size: var(--font-16);
       text-align: center;
+      transition: .3s ease-in-out;
 
       @include to(1024px) {
         width: 100%;
+      }
+
+      @include from(1023px) {
+        &:hover {
+          border-bottom: 1px solid $bc;
+          border-top: 1px solid $bc;
+          transition: .3s ease-in-out;
+        }
       }
 
       &.active {
@@ -74,6 +83,17 @@
     --card-img-h: 250px;
   }
 
+  @include from(1024px) {
+    &:hover {
+      .img {
+        img {
+          transform: scale(1.1);
+          transition: .5s ease-in-out;
+        }
+      }
+    }
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,6 +116,7 @@
       width: 100%;
       object-fit: cover;
       object-position: center;
+      transition: .5s ease-in-out;
     }
   }
 

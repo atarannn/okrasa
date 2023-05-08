@@ -60,6 +60,16 @@
     fill: $bc;
     height: 16px;
     width: 16px;
+    transition: .3s ease-in-out;
+  }
+
+  @include from(1023px) {
+    &:hover {
+      svg {
+        fill: $green;
+        transition: .3s ease-in-out;
+      }
+    }
   }
 }
 
@@ -1520,19 +1530,19 @@
       }
 
       .arrow-green-2 {
-        animation: 3s ease-in-out infinite 0.1s footerArrow;
+        animation: 4s ease-in-out infinite 0.1s footerArrow;
         z-index: 1;
         left: 0;
       }
 
       .arrow-green-3 {
-        animation: 3s ease-in-out infinite 0.2s footerArrow1;
+        animation: 4s ease-in-out infinite 0.2s footerArrow1;
         z-index: 2;
         left: 4.65%;
       }
 
       .arrow-green-4 {
-        animation: 3s ease-in-out infinite 0.3s footerArrow1;
+        animation: 4s ease-in-out infinite 0.3s footerArrow1;
         z-index: 3;
         left: 9.3%;
       }
