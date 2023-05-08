@@ -196,7 +196,7 @@ function handleMobileBlockImageHorizontalScroll(el) {
 
   slider.addEventListener('input', (evt) => {
     imageScrollContainer.scrollTo({
-      left: evt.target.value
+      left: evt.target.value - window.innerWidth / 2
     });
 
     const swipeXoffset = gsap.utils.mapRange(
@@ -205,6 +205,9 @@ function handleMobileBlockImageHorizontalScroll(el) {
       slideSvgButtonRadius * 2, sliderSvgWidth,
       evt.target.value
     );
+    sliderSvg.insertAdjacentHTML('afterbegin', `
+      <circle cx="40" cy="40" r="39.5" stroke="#fff" stroke-dasharray="1 10" class="Ellipse 83"></circle>
+    `);
     slideSvgButton.setAttribute('transform', `translate(${swipeXoffset - (slideSvgButtonRadius * 2)} ,0)`)
   });
 

@@ -49,6 +49,7 @@
             overflow-x: auto;
             overflow-y: hidden;
             pointer-events: none;
+            height: 100%;
             &>* {
                 pointer-events: all;
             }
