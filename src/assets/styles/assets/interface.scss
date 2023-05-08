@@ -78,24 +78,8 @@
 
   &:hover {
     svg {
-      //transform: translateX(10px);
-      //width: 43px;
-      //transition: .3s ease-in-out;
-      animation: 1.3s linear infinite dark;
-    }
-  }
-
-  @keyframes dark {
-    0% {
-      transform: translateX(0);
-    }
-
-    50% {
       transform: translateX(10px);
-    }
-
-    100% {
-      transform: translateX(0);
+      transition: .5s ease-in-out;
     }
   }
 
@@ -121,7 +105,7 @@
     fill: $bc;
     width: 35px;
     height: 20px;
-    transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
   }
 }
 
@@ -139,24 +123,8 @@
 
   &:hover {
     svg {
-      //transform: translateX(10px);
-      //width: 43px;
-      //transition: .3s ease-in-out;
-      animation: 1.3s linear infinite white;
-    }
-  }
-
-  @keyframes white {
-    0% {
-      transform: translateX(0);
-    }
-
-    50% {
       transform: translateX(10px);
-    }
-
-    100% {
-      transform: translateX(0);
+      transition: .5s ease-in-out;
     }
   }
 
@@ -172,6 +140,7 @@
     fill: $wc;
     width: 35px;
     height: 20px;
+    transition: .5s ease-in-out;
   }
 
   @include to(1440px) {
@@ -183,7 +152,6 @@
     min-width: 100%;
   }
 }
-
 
 
 .green-subtitle {
@@ -1348,6 +1316,15 @@
       bottom: 0;
       transform: translateX(-50%);
 
+      @include from(1023px) {
+        &:hover {
+          svg {
+            animation: 2s infinite arrow;
+            transition: .5s ease-in-out;
+          }
+        }
+      }
+
       @include to(680px) {
         gap: 8px;
       }
@@ -1357,6 +1334,7 @@
         fill: $wc;
         height: 16px;
         width: 16px;
+        transition: .5s ease-in-out;
       }
     }
   }
@@ -1530,6 +1508,44 @@
       width: 40%;
     }
 
+    .arrow-green-desktop {
+      display: flex;
+
+      @include to(1024px) {
+        display: none;
+      }
+
+      .arrow-green-1 {
+        z-index: 0;
+      }
+
+      .arrow-green-2 {
+        animation: 3s ease-in-out infinite 0.1s footerArrow;
+        z-index: 1;
+        left: 0;
+      }
+
+      .arrow-green-3 {
+        animation: 3s ease-in-out infinite 0.2s footerArrow1;
+        z-index: 2;
+        left: 4.65%;
+      }
+
+      .arrow-green-4 {
+        animation: 3s ease-in-out infinite 0.3s footerArrow1;
+        z-index: 3;
+        left: 9.3%;
+      }
+    }
+
+    .arrow-green-mobile {
+      display: none;
+
+      @include to(1024px) {
+        display: flex;
+      }
+    }
+
     .arrow-green {
       position: absolute;
       left: -1px;
@@ -1555,5 +1571,142 @@
     z-index: 2;
     object-fit: contain;
     pointer-events: none;
+  }
+}
+
+.btn-hover {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: $dark-green!important;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: $green!important;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  }
+
+  @include from(1023px) {
+    &:hover {
+      &:before {
+        transform: translate3d(0, -100%, 0);
+      }
+    }
+  }
+}
+
+.btn-hover-2 {
+  @include from(1023px) {
+    transition: .3s ease-in-out;
+
+    &:hover {
+      background: $dark-green!important;
+      transition: .3s ease-in-out;
+    }
+  }
+}
+
+.header__menu-inner {
+  .btn-hover-3 {
+    @include from(1023px) {
+      &:before {
+        background: $wc;
+      }
+    }
+  }
+}
+
+.btn-hover-3 {
+  @include from(1023px) {
+    position: relative;
+
+    &.footer-text {
+      &:before {
+        background: $grey;
+      }
+    }
+
+    &:before {
+      content: "";
+      background: $bc;
+      position: absolute;
+      width: 100%;
+      height: 0.5px;
+      top: 100%;
+      left: 0;
+      pointer-events: none;
+      transform-origin: 100% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      &:before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+}
+
+.btn-hover-4 {
+  @include from(1023px) {
+    span {
+      position: relative;
+
+      &:before {
+        content: "";
+        background: $bc;
+        position: absolute;
+        width: 100%;
+        height: 0.5px;
+        top: 100%;
+        left: 0;
+        pointer-events: none;
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.3s;
+      }
+    }
+
+    &:hover {
+      span {
+        &:before {
+          transform-origin: 0% 50%;
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    }
+  }
+}
+
+.btn-hover-5 {
+  @include from(1023px)  {
+    transition: .3s ease-in-out;
+
+    &:hover {
+      color: $bc!important;
+      transition: .3s ease-in-out;
+    }
+  }
+}
+
+.svg-hover {
+  @include from(1023px) {
+    svg {
+      transition: .3s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        stroke: $green!important;
+        transition: .3s ease-in-out;
+      }
+    }
   }
 }

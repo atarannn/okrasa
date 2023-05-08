@@ -260,6 +260,16 @@
         fill: $wc;
         height: 16px;
         width: 16px;
+        transition: .5s ease-in-out;
+      }
+
+      @include from(1023px) {
+        &:hover {
+          svg {
+            animation: 2s infinite arrow;
+            transition: .5s ease-in-out;
+          }
+        }
       }
     }
 
@@ -307,6 +317,15 @@
         //margin-right: var(--offset-20);
       }
 
+      @include from(1023px) {
+        &:hover {
+          .section-1-info-2-row svg {
+            animation: 2s infinite arrow2;
+            transition: .5s ease-in-out;
+          }
+        }
+      }
+
       .section-1-info-2-row {
         display: flex;
         align-items: center;
@@ -318,6 +337,7 @@
           fill: $wc;
           height: 16px;
           width: 16px;
+          transition: .5s ease-in-out;
         }
 
         .light-text-main {
