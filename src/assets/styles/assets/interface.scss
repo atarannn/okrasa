@@ -1044,8 +1044,11 @@
             max-width: 16px;
             height: 16px;
             fill: $green;
+            stroke: $green;
             transform: rotate(90deg);
             transition: .2s ease-in-out;
+            opacity: 1;
+            visibility: visible;
           }
 
           & span {
@@ -1249,6 +1252,7 @@
   height: 100vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
 
   &-bg {
     position: relative;
@@ -1273,6 +1277,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      pointer-events: none;
     }
 
     &-info-wrapper {
