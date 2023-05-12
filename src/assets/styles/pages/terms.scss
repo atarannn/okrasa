@@ -98,4 +98,17 @@
   }
 }
 
+.tablet {
+  .section-terms {
+    .terms-info {
+      .row {
+        gap: 0;
+        &>:nth-child(n+2) {
+          margin-left: var(--offset-20);
+        }
+      }
+    }
+  }
+}
+
 @import '../mobile/terms/terms-mobile';

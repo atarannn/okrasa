@@ -175,4 +175,27 @@
   }
 }
 
+.tablet {
+  .single-news-wrapper {
+    .single-news {
+      gap: 0;
+      &>:nth-child(n+2) {
+        margin-top: var(--offset-40);
+      }
+      .text-wrapper {
+        gap: 0;
+        &>:nth-child(n+2) {
+          margin-top: var(--offset-20);
+        }
+      }
+    }
+    .last-news {
+      gap: 0;
+        &>:nth-child(n+2) {
+          margin-top: 40px;
+        }
+    }
+  }
+}
+
 @import '../mobile/news-mobile';

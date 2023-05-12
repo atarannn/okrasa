@@ -101,8 +101,9 @@
                 /* Light Gray */
 
                 border: 1px solid #EBEBEB;
-                border-inline-color: transparent;
-                padding-block: 8px;
+                border-left-color: transparent;border-right-color: transparent;
+                padding-top: 8px;
+                padding-bottom: 8px;
                 width: 100%;
                 .text {
                     font-weight: 600;

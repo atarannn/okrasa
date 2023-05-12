@@ -169,7 +169,10 @@
           flex-direction: column;
           align-items: flex-start;
           justify-content: flex-start;
-          gap: var(--offset-12);
+          gap: 0;
+          &>:nth-child(n+2) {
+            margin-top: var(--offset-12);
+          }
         }
       }
     }
@@ -208,7 +211,10 @@
           flex-direction: column;
           align-items: flex-start;
           justify-content: flex-start;
-          gap: 8px;
+          // gap: 8px;
+          &>:nth-child(n+2) {
+            margin-top: 8px;
+          }
 
           @include to(1024px) {
             width: calc(100%/3);

@@ -36,7 +36,10 @@
         align-items: center;
         justify-content: flex-start;
         z-index: 10;
-        gap: 6px;
+
+        &>:nth-child(n+2) {
+          margin-left: 6px;
+        }
 
         @include to(1440px) {
           left: calc(var(--header-w) + 98px);
@@ -1390,6 +1393,77 @@
   }
 }
 
+.tablet {
+  .section-6 {
+    .section-6-slider.section-6-slider-4 {
+      .swiper-wrapper {
+        .swiper-slide {
+          gap: 0;
+          &>:nth-child(n+2) {
+            margin-top: var(--offset-20);
+          }
+          .info {
+            gap: 0;
+            &>:nth-child(n+2) {
+              margin-top: 12px;
+            }
+          }
+          .text-wrapper {
+            gap: 0;
+            &>:nth-child(n+2) {
+              margin-top: 12px;
+            }
+          }
+          .slider-top-left__title {
+            gap: 0;
+            &>:nth-child(n+2) {
+              margin-left: 12px;
+            }
+          }
+          .slider-text {
+            gap: 0;
+            &>:nth-child(n+2) {
+              margin-top: 32px;
+            }
+          }
+          .info-wrapper-4 {
+            gap: 0;
+              &>:nth-last-child(n+2) {
+                margin-bottom: var(--offset-20);
+              }
+            .info-row {
+              gap: 0;
+              &>:nth-child(n+2) {
+                margin-top: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .section-6-slider.section-6-slider-3 {
+      .swiper-wrapper {
+        .swiper-slide {
+          gap: 0;
+          &>:nth-child(n+2) {
+            margin-bottom: 40px;
+          }
+          .left {
+            .info-wrapper {
+              .info {
+                gap: 0;
+                &>:nth-child(n+2) {
+                  margin-top: var(--offset-20);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @import '../mobile/home/section-6-mobile';
 
 .section-7 {
@@ -1466,7 +1540,7 @@
   --swiper-padding-2: 35px;
   .swiper-pagination-bullet {
     border: 1px solid $green;
-    border-inline-color: transparent;
+    border-left-color: transparent;border-right-color: transparent;
     border-radius: 0;
     padding: 0;
     display: flex;

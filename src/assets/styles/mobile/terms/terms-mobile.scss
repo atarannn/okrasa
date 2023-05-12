@@ -16,7 +16,8 @@
             flex-direction: column;
             .info {
                 width: 100%;
-                padding-block: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
             }
         }
     }
@@ -64,7 +65,8 @@
         @at-root .mobile body[id*="style"] .swiper-navigation-wrapper.swiper-pagination-2 {
             width: 100% !important;
             justify-content: flex-start !important;
-            padding-inline: 30px !important;
+            padding-left: 30px !important;
+            padding-right: 30px !important;
         }
         @at-root .mobile body[id*="style"] .swiper-navigation-wrapper.swiper-pagination-2 .swiper-pagination-bullet {
             width: auto !important;
@@ -80,7 +82,8 @@
         }
         @at-root .mobile body[id*="creators"] .swiper-navigation-wrapper {
             margin-left: 0 !important;
-            padding-inline: 30px  !important;
+            padding-left: 30px  !important;
+            padding-right: 30px  !important;
         }
         .swiper-navigation-wrapper {
             height: auto;
@@ -98,13 +101,15 @@
 
             width: 100vw;
             max-width: none;
-            padding-inline: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
             @at-root .mobile .section-6-slider-3 & {
                 margin-left: 0;
                 margin-right: 0;
             }
             .swiper-pagination-bullet {
-                padding-inline: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
                 border-block-color: #EBEBEB;
                 height: 48px;
                 &.swiper-pagination-bullet-active {

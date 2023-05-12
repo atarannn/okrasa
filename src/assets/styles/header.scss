@@ -97,14 +97,19 @@
     width: 100%;
 
     @include to(1440px) {
-      gap: 14px;
+      gap: 0;
+      &>:nth-child(n+2) {
+        margin-top: 14px;
+      }
     }
 
     li {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 8px;
+      // gap: 8px;
+      margin-top: 4px;
+      margin-bottom: 4px;
       position: relative;
       width: 100%;
 
@@ -222,6 +227,26 @@
 
     .main-btn {
       min-width: 100%;
+    }
+  }
+}
+
+.tablet {
+  .header-open {
+    .header__menu {
+      &-information {
+        .header__menu-inner.active {
+          margin-top: 20px;
+        }
+      }
+      li {
+        .header__menu-inner {
+          gap: 0;
+          &>:nth-child(n+2) {
+            margin-top: var(--offset-20);
+          }
+        }
+      }
     }
   }
 }

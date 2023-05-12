@@ -13,7 +13,7 @@
                 --swiper-padding-2: 35px;
                 .swiper-pagination-bullet {
                     border: 1px solid $green;
-                    border-inline-color: transparent;
+                    border-left-color: transparent;border-right-color: transparent;
                     border-radius: 0;
                     padding: 0;
                     display: flex;

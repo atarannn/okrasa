@@ -58,6 +58,26 @@ body[class*='construction'],
   }
 }
 
+.tablet body[id*='construction'],
+.tablet body[class*='construction'],
+.tablet #construction {
+  .left {
+    .top {
+      gap: 0;
+      &>:nth-child(n+2) {
+        margin-top: var(--offset-20);
+      }
+    }
+    .bottom {
+      gap: 0;
+      &>:nth-child(n+2) {
+        margin-left: var(--offset-20);
+      }
+    }
+  }
+}
+
+
 .construction_progress-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -242,6 +262,22 @@ body[class*='construction'],
         width: 100%;
         gap: var(--offset-20);
       }
+    }
+  }
+}
+
+.tablet {
+  .construction_progress-popup-wrapper {
+    .construction_progress-popup {
+      .left  {
+        gap: 0;
+        &>:nth-child(n+2) {
+          margin-top: var(--offset-20);
+        }
+      }
+    }
+    .swiper {
+      height: 67vh;
     }
   }
 }

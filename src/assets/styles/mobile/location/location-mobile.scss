@@ -10,7 +10,8 @@
     }
     .location-section-2 {
         .dark-text {
-            padding-inline: var(--block-offset-left);
+            padding-left: var(--block-offset-left);
+            padding-right: var(--block-offset-left);
         }
     }
 
@@ -42,7 +43,8 @@
         --offset-50: 30px;
         .gallery-wrapper {
             display: block;
-            padding-inline: 0;
+            padding-left: 0;
+            padding-right: 0;
             .swiper-slide:after {
                 content: '';
                 position: absolute;

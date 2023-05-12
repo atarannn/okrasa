@@ -74,6 +74,16 @@
   }
 }
 
+.tablet {
+  .inner-section {
+    gap: 0;
+    &>:nth-child(n+2) {
+      margin-top: var(--offset-100);
+    }
+  
+  }
+}
+
 .news-card {
   --card-h: 542px;
   --card-img-h: 360px;
@@ -147,6 +157,15 @@
       color: $bc;
       font-size: var(--font-20);
       text-align: left;
+    }
+  }
+}
+
+.tablet .news-card {
+  &-info {
+    gap: 0;
+    &>:nth-child(n+2) {
+      margin-top: 12px;
     }
   }
 }

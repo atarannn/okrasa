@@ -31,14 +31,14 @@
       background: transparent;
       color: $bc;
       border: 1px solid $bc;
-      border-inline-color: transparent;
+      border-left-color: transparent;border-right-color: transparent;
   }
 
   .section-6 .section-6-slider .swiper-navigation-wrapper.swiper-pagination .swiper-pagination-bullet {
     background: transparent;
     color: $bc;
     border: 1px solid $lightGrey;
-    border-inline-color: transparent;
+    border-left-color: transparent;border-right-color: transparent;
     white-space: nowrap;
   }
 
@@ -48,7 +48,8 @@
 
   .section-6 .section-6-slider.section-6-slider-2 .swiper-navigation-wrapper.swiper-pagination {
     top: 0;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .section-6 .section-6-slider.section-6-slider-2 .swiper-wrapper .swiper-slide .swiper-slide-info-wrapper .light-text, .section-6 .section-6-slider.section-6-slider-2 .swiper-wrapper .swiper-slide .swiper-slide-info-wrapper .dark-text {
