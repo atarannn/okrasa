@@ -108,7 +108,7 @@ function mobileHeaderHandler() {
       document.querySelectorAll('.header__menu-inner.active').forEach(el => el.classList.remove('active'))
       return;
     }
-    target.querySelector('.header__menu-inner').classList.add('active');
+    target.querySelector('.header__menu-inner').classList.toggle('active');
   });
 }
 

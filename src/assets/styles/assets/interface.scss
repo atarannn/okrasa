@@ -1225,6 +1225,7 @@
 
         @include to(1440px) {
           height: calc(var(--btn-h) - 1px);
+          margin-top: 15px;
         }
       }
     }

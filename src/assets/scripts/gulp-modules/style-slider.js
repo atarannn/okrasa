@@ -62,6 +62,7 @@ function styleMobileSlider() {
       </div>
     `);
   
+    checkLeftScrollEdge(section6Navigation.scrollLeft, section6Navigation.scrollLeft);
     document.body.addEventListener('click',function(evt){
       const target = evt.target.closest('[data-section-6-mobile-scroll-next]');
       if (!target) return;

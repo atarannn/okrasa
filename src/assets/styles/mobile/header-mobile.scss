@@ -24,7 +24,7 @@
                 justify-content: center;
                 svg {
                     transform: rotate(270deg);
-                    margin-left: 4px;
+                    margin-left: 12px;
                 }
             }
         }
@@ -40,6 +40,7 @@
             margin-right: calc(var(--offset-40) * -1);
             width: 100%;
             display: none;
+            margin-top: 15px;
             &.active {
                 display: flex;
                 animation: fadeFromTop .25s 1 ease-out;

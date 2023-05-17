@@ -3,12 +3,15 @@
     flex-direction: column;
     gap: var(--offset-50);
 
+    &-info {
+      width: 100%;
+    }
     .submit-btn, .main-btn {
-      width: 256px;
+      width: 100%;
     }
 
     .form {
-      width: min-content;
+      width: 100%;
     }
   }
 }
