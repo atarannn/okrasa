@@ -41,6 +41,26 @@ form.forEach((form) => {
         $form,
         showSuccessMessage: false,
         successAction: () => {
+          function callThanksPopup(callSelector, contentToOpenSelector) {
+            const submitBtn = document.querySelectorAll(callSelector);
+            const content = document.querySelector(contentToOpenSelector);
+
+            submitBtn.forEach(elem => {
+              formCloseAnim();
+              document.querySelector('body').style.overflow = 'auto';
+            });
+
+            function formCloseAnim() {
+              const tl = gsap.timeline({ paused: true });
+              tl.fromTo(content, {autoAlpha: 1},
+                { autoAlpha: 0, ease: 'power4.easeInOut', duration: 0.2 }, '<');
+              tl.add(() => {
+                content.classList.remove('active');
+              });
+              tl.play();
+            }
+          }
+          callThanksPopup('[data-btn-submit]', '[data-form-wrapper]');
           },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {
@@ -82,6 +102,26 @@ revision.forEach((form) => {
         $form,
         showSuccessMessage: false,
         successAction: () => {
+          function callThanksPopup(callSelector, contentToOpenSelector) {
+            const submitBtn = document.querySelectorAll(callSelector);
+            const content = document.querySelector(contentToOpenSelector);
+
+            submitBtn.forEach(elem => {
+              formCloseAnim();
+              document.querySelector('body').style.overflow = 'auto';
+            });
+
+            function formCloseAnim() {
+              const tl = gsap.timeline({ paused: true });
+              tl.fromTo(content, {autoAlpha: 1},
+                { autoAlpha: 0, ease: 'power4.easeInOut', duration: 0.2 }, '<');
+              tl.add(() => {
+                content.classList.remove('active');
+              });
+              tl.play();
+            }
+          }
+          callThanksPopup('[data-btn-submit]', '[data-revision-wrapper]');
         },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {

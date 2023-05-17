@@ -1052,7 +1052,7 @@
               transition: .2s ease-in-out;
             }
 
-            svg {
+            svg, img {
               transform: rotate(-90deg);
               transition: .2s ease-in-out;
             }
@@ -1062,7 +1062,7 @@
             display: flex;
           }
 
-          & svg {
+          svg, img {
             max-width: 16px;
             height: 16px;
             fill: $green;
@@ -1118,7 +1118,7 @@
               }
             }
 
-            & svg {
+            svg, img {
               max-width: 34px;
               height: 34px;
 
@@ -1499,8 +1499,12 @@
   align-items: stretch;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 450px;
   position: relative;
+
+  @include to(1440px) {
+    height: 340px;
+  }
 
   @include to(1024px) {
     height: 280px;
@@ -1628,13 +1632,13 @@
       .arrow-green-3 {
         animation: 4s ease-in-out infinite 0.2s footerArrow1;
         z-index: 2;
-        left: 4.65%;
+        left: 5.4%;
       }
 
       .arrow-green-4 {
         animation: 4s ease-in-out infinite 0.3s footerArrow1;
         z-index: 3;
-        left: 9.3%;
+        left: 10.5%;
       }
     }
 

@@ -25,6 +25,10 @@
                 svg {
                     transform: rotate(270deg);
                     margin-left: 12px;
+
+                  &.active {
+                    transform: rotate(90deg);
+                  }
                 }
             }
         }
@@ -44,6 +48,8 @@
             &.active {
                 display: flex;
                 animation: fadeFromTop .25s 1 ease-out;
+
+
             }
         }
         .header-open &__menu {
