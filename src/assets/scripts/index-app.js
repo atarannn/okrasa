@@ -214,3 +214,51 @@ function handleMobileBlockImageHorizontalScroll(el) {
   slider.value = imageScrollContainer.scrollWidth / 2;
   slider.dispatchEvent(new Event('input'));
 }
+
+
+
+document.body.addEventListener('click',function(evt){
+  const target = evt.target.closest('.block-style-nav');
+  if (!target) return;
+  if (target.getAttribute('href').match(/3d/)) return;
+  evt.preventDefault();
+  document.querySelectorAll('.js-cloned-for-transfer-page').forEach(el => {
+    el.remove();
+  })
+  const cloned = target.cloneNode(true);
+  cloned.classList.add('js-cloned-for-transfer-page')
+  gsap.set(cloned, {
+    position: 'fixed',
+    width: "100%",
+    height: target.getBoundingClientRect().height,
+    top: target.getBoundingClientRect().top,
+    left: "0",
+    zIndex: "99"
+  });
+  cloned.querySelector('.block-offset-left').remove();
+  cloned.querySelector('.block-style-nav-right').style.marginLeft = 'auto';
+  cloned.querySelector('.block-style-nav-right').classList.add('transfering');
+  cloned.querySelectorAll('.patern-main-1, .arrow-green, .patern-main-1').forEach(el => el.remove());
+  const href = target.getAttribute('href');
+  document.body.append(cloned);
+
+  gsap.timeline()
+    .to('.js-cloned-for-transfer-page .block-style-nav-right', {
+      width: '100%',
+      transformOrigin: 'right',
+      duration: 0.45,
+      ease: 'Expo.in'
+    },'<')
+    .to(cloned, {
+      top: 0,
+      height: window.innerHeight,
+      duration: 0.75,
+      ease: 'Expo.in'
+    })
+    .add(el => {
+      if (barba) {
+        barba.go(href);
+      }
+    })
+
+});
