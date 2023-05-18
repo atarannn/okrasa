@@ -273,6 +273,7 @@ document.body.addEventListener('click',function(evt){
     height: target.getBoundingClientRect().height,
     top: target.getBoundingClientRect().top,
     left: "0",
+    overflow: "hidden",
     zIndex: "99"
   });
   cloned.querySelector('.block-offset-left').remove();
@@ -285,14 +286,14 @@ document.body.addEventListener('click',function(evt){
   gsap.timeline()
     .to('.js-cloned-for-transfer-page .block-style-nav-right', {
       width: '100%',
-      transformOrigin: 'right',
-      duration: 0.45,
-      ease: 'Expo.in'
+      duration: 0.7,
+      ease: 'Expo.in',
+      scale: 1.15,
     },'<')
     .to(cloned, {
       top: 0,
       height: window.innerHeight,
-      duration: 0.75,
+      duration: 0.65,
       ease: 'Expo.in'
     })
     .add(el => {
