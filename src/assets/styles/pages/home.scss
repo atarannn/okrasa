@@ -64,6 +64,7 @@
         padding-top: 10px;
         margin: 0;
         opacity: 1;
+        cursor: pointer;
 
         .animation-line {
           position: absolute;
@@ -75,17 +76,12 @@
           border-bottom: 1px solid rgba(255, 253, 247, 0.4);
           z-index: -1;
 
-          line {
+          & [data-white-line] {
             height: 6px;
-            stroke: rgba(255, 253, 247, 0);
-            z-index: 0;
-
-            &[data-white-line] {
-              height: 6px;
-              transform: scale(0);
-              stroke: $wc;
-              z-index: 1;
-            }
+            transform: scaleX(0);
+            fill: $wc;
+            z-index: 1;
+            margin: 0;
           }
         }
       }
@@ -93,10 +89,8 @@
         color: $wc;
 
         .animation-line {
-          line {
-            &[data-white-line] {
-              transform: scale(10);
-            }
+          & [data-white-line] {
+            transform: scale(1);
           }
         }
       }
