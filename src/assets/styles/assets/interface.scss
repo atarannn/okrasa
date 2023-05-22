@@ -1642,13 +1642,21 @@
       .arrow-green-3 {
         animation: 4s ease-in-out infinite 0.2s footerArrow1;
         z-index: 2;
-        left: 5.2%;
+        left: 4.6%;
+
+        @include to(1440px) {
+          left: 5.2%;
+        }
       }
 
       .arrow-green-4 {
         animation: 4s ease-in-out infinite 0.3s footerArrow1;
         z-index: 3;
-        left: 10.5%;
+        left: 9.2%;
+
+        @include to(1440px) {
+          left: 10.5%;
+        }
       }
     }
 

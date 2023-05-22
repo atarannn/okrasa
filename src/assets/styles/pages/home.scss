@@ -90,7 +90,7 @@
 
         .animation-line {
           & [data-white-line] {
-            transform: scale(1);
+            transform: scale(10);
           }
         }
       }
@@ -365,7 +365,7 @@
 
   .patern-main-2 {
     top: -5%;
-    left: 5%;
+    left: 50%;
     width: 500px;
 
     @include to(1440px) {
@@ -462,15 +462,14 @@
           width: 100%;
           z-index: -1;
 
-          line {
-            stroke: rgba(31, 32, 38, 0.2);
+          rect {
             z-index: 0;
+            stroke: rgba(31, 32, 38, 0.2);
+          }
 
-            &[data-line] {
-              transform: scale(0);
-              stroke: $green;
-              z-index: 1;
-            }
+          [data-line] {
+            stroke: $green;
+            z-index: 1;
           }
         }
 
@@ -515,14 +514,6 @@
         &:after {
           background: $green;
           z-index: 1;
-        }
-
-        .animation-line {
-          line {
-            &[data-line] {
-              transform: scale(1);
-            }
-          }
         }
       }
     }
@@ -634,39 +625,29 @@
           }
         }
 
-        .swiper-pagination-bullet {
-          .animation-line {
-            line {
-              &[data-line] {
-                stroke: $bc;
-              }
-            }
-          }
-        }
-
-        .swiper-pagination-bullet-active {
-          color: $bc;
-
-          &:before {
-            border: 3px solid $bc;
-            background: $bc;
-            z-index: 1;
-          }
-
-          &:after {
-            border: 3px solid $bc;
-            background: $bc;
-            z-index: 1;
-          }
-
-          .animation-line {
-            line {
-              &[data-line] {
-                transform: scale(1);
-              }
-            }
-          }
-        }
+        //.swiper-pagination-bullet {
+        //  .animation-line {
+        //    [data-line] {
+        //      stroke: $bc;
+        //    }
+        //  }
+        //}
+        //
+        //.swiper-pagination-bullet-active {
+        //  color: $bc;
+        //
+        //  &:before {
+        //    border: 3px solid $bc;
+        //    background: $bc;
+        //    z-index: 1;
+        //  }
+        //
+        //  &:after {
+        //    border: 3px solid $bc;
+        //    background: $bc;
+        //    z-index: 1;
+        //  }
+        //}
       }
 
       .swiper-wrapper {
@@ -765,11 +746,21 @@
         }
 
         .swiper-pagination-bullet {
+          &:before {
+            border: 3px solid $bc;
+            background: $wc;
+            z-index: 1;
+          }
+
+          &:after {
+            border: 3px solid $bc;
+            background: $wc;
+            z-index: 1;
+          }
+
           .animation-line {
-            line {
-              &[data-line] {
-                stroke: $bc;
-              }
+            [data-line] {
+              stroke: $bc;
             }
           }
         }
@@ -790,10 +781,8 @@
           }
 
           .animation-line {
-            line {
-              &[data-line] {
-                transform: scale(1);
-              }
+            [data-line] {
+              transform: scale(1);
             }
           }
         }
@@ -1039,6 +1028,7 @@
           width: 2px;
           height: 100%;
           padding-bottom: 0;
+          white-space: nowrap;
 
           &:last-child {
             height: auto;
@@ -1067,36 +1057,35 @@
 
           .animation-line {
             height: 100%;
+            left: -10px;
 
-            line {
-              &[data-line] {
+              [data-line] {
                 stroke: $bc;
               }
-            }
           }
 
           &:after {
             position: absolute;
-            left: -6px;
+            left: -16px;
             top: -6px;
             content: '';
             height: 12px;
             width: 12px;
             background: $wc;
             border-radius: 100%;
-            border: 3px solid $green;
+            border: 3px solid $bc;
           }
 
           &:before {
             position: absolute;
-            left: -6px;
+            left: -16px;
             bottom: -6px;
             content: '';
             height: 12px;
             width: 12px;
             background: $wc;
             border-radius: 100%;
-            border: 3px solid $green;
+            border: 3px solid $bc;
           }
         }
 
@@ -1116,11 +1105,9 @@
           }
 
           .animation-line {
-            line {
-              &[data-line] {
-                transform: scale(0);
+              [data-line] {
+                //transform: scale(0);
               }
-            }
           }
         }
       }
