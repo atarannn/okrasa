@@ -8,6 +8,7 @@
 
       @include to(1440px) {
         width: 50%;
+        top: 58%;
       }
 
       @include to(1024px) {
@@ -33,11 +34,22 @@
   justify-content: center;
   margin: 25% 0 var(--offset-50);
 
+  @include to(1440px) {
+    margin: 15% 0 2%;
+  }
+
   .num-404 {
     @include font($default-font2 ,400, 100%);;
     color: $wc;
     text-align: center;
     font-size: var(--font-200);
+  }
+
+  img {
+    @include to(1440px) {
+      height: 150px;
+      width: auto;
+    }
   }
 }
 .row-404-2 {
