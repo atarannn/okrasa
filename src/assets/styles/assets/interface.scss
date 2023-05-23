@@ -1302,6 +1302,7 @@
   width: 100%;
   position: relative;
   //overflow: hidden;
+  pointer-events: none;
 
   .overflow-wrapper {
     height: 100%;
@@ -1380,6 +1381,7 @@
       gap: var(--offset-20);
       cursor: pointer;
       width: fit-content;
+      pointer-events: all;
 
       position: absolute;
       left: 50%;
