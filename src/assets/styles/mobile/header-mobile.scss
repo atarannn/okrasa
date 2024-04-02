@@ -260,6 +260,13 @@
   }
 }
 
+
+.tablet.landscape .header {
+    @media screen and (min-width: 1120px){
+        height: 100vh;
+    }
+}
+
 .mobile {
   .choose-apartment-btn-wrapper {
     top: calc(var(--header-h) + 8px);

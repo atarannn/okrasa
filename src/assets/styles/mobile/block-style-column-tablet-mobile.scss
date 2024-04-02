@@ -24,6 +24,7 @@
             bottom: calc(var(--offset-50) + 35px);
             // transform: scaleY(1.5);
             opacity: 0;
+            height: 80px;
 
             margin-bottom: -10px;
             &::-webkit-slider-thumb {
@@ -115,3 +116,8 @@
 
 
 
+.tablet.landscape {
+    .block-style-column__mobile-slider {
+        display: none;
+    }
+}

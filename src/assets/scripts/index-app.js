@@ -7,6 +7,7 @@ import SexyInput from '../../pug/components/input/input';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import "current-device";
 import { TweenMax } from 'gsap/gsap-core';
+import debounce from 'lodash/debounce';
 
 
 global.TweenMax = TweenMax;
@@ -31,6 +32,36 @@ const revision = [
 const contacts = [
   '[data-form-contacts]',
 ];
+
+
+
+
+// function detectIpadPro() {
+//   if (document.documentElement.classList.contains('tablet')) return;
+//   const orientation = window.matchMedia("(orientation: portrait)").matches ? 'portrait' : 'landscape';
+//   switch (orientation) {
+//     case 'portarait':
+//       if (window.innerWidth === 1024 && window.innerHeight === 1366) {
+//         document.documentElement.classList.remove('desktop');
+//         document.documentElement.classList.add('tablet');
+//       }
+//       break;
+//     case 'landscape':
+//       if (window.innerWidth === 1366 && window.innerHeight === 1024) {
+//         document.documentElement.classList.remove('desktop');
+//         document.documentElement.classList.add('tablet');
+//       }
+//       break;
+//   }
+// }
+
+
+// const detectIpadProDebounce = debounce(detectIpadPro, 100);
+
+// detectIpadProDebounce();
+
+// window.addEventListener('resize', detectIpadProDebounce);
+
 
 
 form.forEach((form) => {
